@@ -7,8 +7,9 @@ const OUTPUT_FILE = path.resolve("data/worldcup.json");
 const PLAYERS_FILE = path.resolve("data/players.json");
 const SUMMARY_FILE = path.resolve("data/summary.json");
 const SUMMARY_HISTORY_FILE = path.resolve("data/summary-history.json");
-const SUMMARY_VERSION = 8;
-const SUMMARY_HISTORY_VERSION = 2;
+const SUMMARY_VERSION = 9;
+const SUMMARY_HISTORY_VERSION = 3;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1-mini";
 
 async function readJson(file) {
   try {
@@ -130,6 +131,10 @@ function pointLabel(points) {
   return `${points} point${points === 1 ? "" : "s"}`;
 }
 
+function playersSignature(players) {
+  return JSON.stringify(players.map((player) => [player.name, player.teams || []]));
+}
+
 function nameList(names) {
   if (names.length === 1) return names[0];
   if (names.length === 2) return `${names[0]} and ${names[1]}`;
@@ -153,56 +158,9 @@ function ownerTeam(team, owners) {
   return owner ? `${team} (${owner})` : team;
 }
 
-function matchVerdict(match, owners, index) {
-  const [score1, score2] = match.score.ft;
-  const team1 = ownerTeam(match.team1, owners);
-  const team2 = ownerTeam(match.team2, owners);
-  const drawLines = [
-    `${team1} and ${team2} drew ${score1}-${score2}, which is useful if you enjoy shrugs with your spreadsheet.`,
-    `${team1} and ${team2} shared a ${score1}-${score2}; nobody wins, nobody loses, everyone pretends this is fine.`,
-  ];
-  const winLines = [
-    (winner, loser, winnerScore, loserScore) =>
-      `${winner} beat ${loser} ${winnerScore}-${loserScore}, so that owner gets to be unbearable for at least one group chat message.`,
-    (winner, loser, winnerScore, loserScore) =>
-      `${winner} turned over ${loser} ${winnerScore}-${loserScore}; a tidy little points delivery with no signature required.`,
-    (winner, loser, winnerScore, loserScore) =>
-      `${winner} saw off ${loser} ${winnerScore}-${loserScore}, leaving the losing owner checking the rules for emotional compensation.`,
-  ];
-
-  if (score1 === score2) return drawLines[index % drawLines.length];
-
-  const homeWin = score1 > score2;
-  const winner = homeWin ? team1 : team2;
-  const loser = homeWin ? team2 : team1;
-  const winnerScore = homeWin ? score1 : score2;
-  const loserScore = homeWin ? score2 : score1;
-  return winLines[index % winLines.length](winner, loser, winnerScore, loserScore);
-}
-
-function chooseHeadline(history) {
-  const used = new Set((history?.summaries || []).map((summary) => summary.headline));
-  const options = [
-    "Sweepstake Sofa Report",
-    "Kitchen Table VAR",
-    "The Mildly Biased Briefing",
-    "Spreadsheet Shenanigans",
-    "Points, Panic and Biscuits",
-    "The Group Chat Gloat",
-    "Fixtures With Feelings",
-    "The Totally Calm Update",
-    "Cup Nerves Bulletin",
-    "The Bragging Rights Memo",
-  ];
-  const fresh = options.find((title) => !used.has(title));
-  if (fresh) return fresh;
-  return `${options[used.size % options.length]} ${used.size + 1}`;
-}
-
-function makeSummary(players, matches, history, options = {}) {
+function rankPlayers(players, matches) {
   const teamStats = buildTeamStats(matches);
-  const owners = buildOwnerMap(players);
-  const ranked = players
+  return players
     .map((player) => ({
       ...player,
       aggregate: aggregatePlayer(player, teamStats),
@@ -216,10 +174,11 @@ function makeSummary(players, matches, history, options = {}) {
       if (b.aggregate.gf !== a.aggregate.gf) return b.aggregate.gf - a.aggregate.gf;
       return a.name.localeCompare(b.name);
     });
+}
 
-  const leader = ranked[0];
-  const runnerUp = ranked[1];
-  const bottom = ranked[ranked.length - 1];
+function buildSummaryContext(players, matches, history, options = {}) {
+  const owners = buildOwnerMap(players);
+  const ranked = rankPlayers(players, matches);
   const recent =
     options.recentMatches ||
     matches
@@ -227,63 +186,101 @@ function makeSummary(players, matches, history, options = {}) {
       .sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a))
       .slice(0, 3);
 
-  if (!leader) {
-    return {
-      generatedAt: options.generatedAt || new Date().toISOString(),
-      summaryVersion: SUMMARY_VERSION,
-      peopleCount: 0,
-      headline: "No managers, no drama.",
-      text: "The AI pundit has checked the teamsheet and found only tumbleweed.",
-    };
-  }
-
-  const lead = runnerUp ? leader.aggregate.points - runnerUp.aggregate.points : 0;
-  const pointGroups = new Map();
-  ranked.forEach((player) => {
-    const points = player.aggregate.points;
-    if (!pointGroups.has(points)) pointGroups.set(points, []);
-    pointGroups.get(points).push(player.name);
-  });
-  const groupedTable = [...pointGroups.entries()]
-    .sort((a, b) => b[0] - a[0])
-    .map(([points, names]) => `${pointLabel(points)}: ${names.join(", ")}`)
-    .join("; ");
-  const leaderNames = pointGroups.get(leader.aggregate.points) || [leader.name];
-  const topLine =
-    lead > 0
-      ? `${leader.name} is ${pointLabel(lead)} clear at the top`
-      : `${nameList(leaderNames)} ${nameVerb(
-          leaderNames,
-        )} sharing top spot by tie-break wizardry`;
-  const bottomNames = pointGroups.get(bottom.aggregate.points) || [bottom.name];
-  const recentLine =
-    recent.map((match, index) => matchVerdict(match, owners, index)).join(" ") ||
-    "No fresh results have landed, so the sweepstake is briefly pretending to be a calm household.";
-  const runnerUpNames = runnerUp
-    ? pointGroups.get(runnerUp.aggregate.points) || [runnerUp.name]
-    : [];
-  const chasingLine = runnerUp
-    ? `${nameList(runnerUpNames)} ${nameVerb(
-        runnerUpNames,
-      )} nearest in the rear-view mirror on ${pointLabel(
-        runnerUp.aggregate.points,
-      )}`
-    : "nobody else has made the table interesting yet";
-
   return {
     generatedAt: options.generatedAt || new Date().toISOString(),
+    recentResults: recent.map((match) => ({
+      team1: ownerTeam(match.team1, owners),
+      team2: ownerTeam(match.team2, owners),
+      score: `${match.score.ft[0]}-${match.score.ft[1]}`,
+      date: match.date,
+      round: match.round,
+      group: match.group,
+    })),
+    standings: ranked.map((player, index) => ({
+      rank: index + 1,
+      name: player.name,
+      points: player.aggregate.points,
+      goalDifference: player.aggregate.gd,
+      goalsFor: player.aggregate.gf,
+      teams: player.teams || [],
+    })),
+    usedHeadlines: (history?.summaries || []).map((summary) => summary.headline).filter(Boolean),
+  };
+}
+
+function extractResponseText(data) {
+  if (typeof data.output_text === "string") return data.output_text;
+  return (data.output || [])
+    .flatMap((item) => item.content || [])
+    .map((content) => content.text || "")
+    .join("");
+}
+
+function parseSummaryJson(text) {
+  const cleaned = text
+    .trim()
+    .replace(/^```(?:json)?/i, "")
+    .replace(/```$/i, "")
+    .trim();
+  const parsed = JSON.parse(cleaned);
+  if (typeof parsed.headline !== "string" || typeof parsed.text !== "string") {
+    throw new Error("OpenAI summary response must include headline and text strings.");
+  }
+  return {
+    headline: parsed.headline.trim(),
+    text: parsed.text.trim(),
+  };
+}
+
+async function requestOpenAiSummary(context) {
+  if (!process.env.OPENAI_API_KEY) {
+    throw new Error("OPENAI_API_KEY is required to generate AI summaries.");
+  }
+
+  const response = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      instructions:
+        "You write short, conversational, amusing British football sweepstake updates. " +
+        "Use the supplied match results and standings only. Mention the main winners and losers from the recent results, then who is best and worst overall. " +
+        "Create a unique punchy headline that is not in usedHeadlines. Do not repeat phrasing from previous titles. " +
+        "Return only JSON with exactly two string fields: headline and text. Keep text under 130 words.",
+      input: JSON.stringify(context),
+      max_output_tokens: 450,
+    }),
+  });
+
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(`OpenAI summary request failed: ${response.status} ${JSON.stringify(data)}`);
+  }
+
+  return parseSummaryJson(extractResponseText(data));
+}
+
+async function makeSummary(players, matches, history, options = {}) {
+  const signature = playersSignature(players);
+  const context = buildSummaryContext(players, matches, history, options);
+  const aiSummary = await requestOpenAiSummary(context);
+  const usedHeadlines = new Set(context.usedHeadlines);
+  const headline = usedHeadlines.has(aiSummary.headline)
+    ? `${aiSummary.headline} (${context.generatedAt.slice(0, 10)})`
+    : aiSummary.headline;
+
+  return {
+    generatedAt: context.generatedAt,
     summaryVersion: SUMMARY_VERSION,
+    source: "openai",
+    model: OPENAI_MODEL,
+    playersSignature: signature,
     peopleCount: players.length,
-    headline: chooseHeadline(history),
-    text:
-      `Right then: ${recentLine} Overall, ${topLine} with ${pointLabel(
-        leader.aggregate.points,
-      )}; ${chasingLine}. Down in the bargain bin, ${bottomNames.join(
-        ", ",
-      )} ${nameVerb(bottomNames)} on ${pointLabel(
-        bottom.aggregate.points,
-      )}, bravely proving that patience is a strategy. ` +
-      `Current points gossip: ${groupedTable}.`,
+    headline,
+    text: aiSummary.text,
   };
 }
 
@@ -300,8 +297,10 @@ function matchDayGeneratedAt(date) {
   return new Date(Date.UTC(year, month - 1, day + 1, 6, 0, 0)).toISOString();
 }
 
-function buildMatchDaySummaryHistory(players, matches) {
-  const scored = matches.filter(hasScore).sort((a, b) => getMatchTimestamp(a) - getMatchTimestamp(b));
+async function buildMatchDaySummaryHistory(players, matches) {
+  const scored = matches
+    .filter(hasScore)
+    .sort((a, b) => getMatchTimestamp(a) - getMatchTimestamp(b));
   const byDate = new Map();
   scored.forEach((match) => {
     if (!byDate.has(match.date)) byDate.set(match.date, []);
@@ -314,16 +313,16 @@ function buildMatchDaySummaryHistory(players, matches) {
   };
   const cumulative = [];
 
-  [...byDate.entries()]
-    .sort((a, b) => a[0].localeCompare(b[0]))
-    .forEach(([date, dayMatches]) => {
-      cumulative.push(...dayMatches);
-      const summary = makeSummary(players, cumulative, history, {
-        generatedAt: matchDayGeneratedAt(date),
-        recentMatches: [...dayMatches].sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a)),
-      });
-      history.summaries.push(summary);
+  for (const [date, dayMatches] of [...byDate.entries()].sort((a, b) =>
+    a[0].localeCompare(b[0]),
+  )) {
+    cumulative.push(...dayMatches);
+    const summary = await makeSummary(players, cumulative, history, {
+      generatedAt: matchDayGeneratedAt(date),
+      recentMatches: [...dayMatches].sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a)),
     });
+    history.summaries.push(summary);
+  }
 
   return history;
 }
@@ -344,21 +343,25 @@ async function main() {
   const existingSummary = await readJson(SUMMARY_FILE);
   const existingHistory = await readJson(SUMMARY_HISTORY_FILE);
   const playersData = await readJson(PLAYERS_FILE);
+  const players = playersData?.players || [];
+  const currentPlayersSignature = playersSignature(players);
   const matchDataChanged =
     JSON.stringify(stripMeta(existing)) !== JSON.stringify(stripMeta(fetched));
   const summaryMissing = !existingSummary;
   const summaryPlaceholder = !existingSummary?.generatedAt;
-  const summaryPeopleChanged =
-    existingSummary?.peopleCount !== (playersData?.players || []).length;
+  const summaryPeopleChanged = existingSummary?.peopleCount !== players.length;
+  const summaryPlayersChanged = existingSummary?.playersSignature !== currentPlayersSignature;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
   const summaryVersionChanged = existingSummary?.summaryVersion !== SUMMARY_VERSION;
   const summaryHistoryChanged = existingHistory?.historyVersion !== SUMMARY_HISTORY_VERSION;
+  const shouldRebuildHistory = summaryHistoryChanged || summaryPlayersChanged;
 
   if (
     !matchDataChanged &&
     !summaryMissing &&
     !summaryPlaceholder &&
     !summaryPeopleChanged &&
+    !summaryPlayersChanged &&
     !summaryHasOldPlural &&
     !summaryVersionChanged &&
     !summaryHistoryChanged
@@ -376,15 +379,15 @@ async function main() {
     console.log(`Updated ${OUTPUT_FILE} from ${SOURCE_URL}`);
   }
 
-  const players = playersData?.players || [];
   const matches = fetched.matches || [];
-  const history = summaryHistoryChanged
-    ? buildMatchDaySummaryHistory(players, matches)
+  const history = shouldRebuildHistory
+    ? await buildMatchDaySummaryHistory(players, matches)
     : existingHistory;
-  const summary = summaryHistoryChanged
-    ? history.summaries?.at(-1) || makeSummary(players, matches, history)
-    : makeSummary(players, matches, history);
-  const outputHistory = summaryHistoryChanged ? history : appendSummary(existingHistory, summary);
+  let summary = history.summaries?.at(-1);
+  if (!shouldRebuildHistory || !summary) {
+    summary = await makeSummary(players, matches, history);
+  }
+  const outputHistory = shouldRebuildHistory ? history : appendSummary(existingHistory, summary);
 
   await writeFile(SUMMARY_FILE, `${JSON.stringify(summary, null, 2)}\n`);
   await writeFile(

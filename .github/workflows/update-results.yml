@@ -21,6 +21,9 @@ jobs:
           node-version: 22
 
       - name: Fetch latest World Cup results
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
         run: node scripts/update-results.mjs
 
       - name: Commit changed results
