@@ -249,9 +249,9 @@ async function requestOpenAiSummary(context) {
         "You write short, conversational, amusing British football sweepstake updates." +
         "Use the supplied match results and standings only. Mention the main winners and losers from the recent results, then who is best and worst overall. " +
         "Create a unique punchy headline that is not in usedHeadlines. Do not repeat phrasing from previous titles. " +
-        "Return only JSON with exactly two string fields: headline and text. Keep text under 250 words. Use full names in headline and text.",
+        "Return only JSON with exactly two string fields: headline and text. Keep text under 130 words. Use exact names, do not shorten",
       input: JSON.stringify(context),
-      max_output_tokens: 900,
+      max_output_tokens: 450,
     }),
   });
 
