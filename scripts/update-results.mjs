@@ -168,7 +168,26 @@ function matchVerdict(match, owners, index) {
   return winLines[index % winLines.length](winner, loser, winnerScore, loserScore);
 }
 
-function makeSummary(players, matches) {
+function chooseHeadline(history) {
+  const used = new Set((history?.summaries || []).map((summary) => summary.headline));
+  const options = [
+    "Boot Room Bulletin",
+    "Penalty Box Gossip",
+    "Golden Boot Gobbets",
+    "Touchline Trouble",
+    "Group Stage Grumbles",
+    "Fixture Fallout",
+    "Goalmouth Gossip",
+    "Whistle Blown, Tea Spilled",
+    "Table Tantrum Watch",
+    "Net Botherers Report",
+  ];
+  const fresh = options.find((title) => !used.has(title));
+  if (fresh) return fresh;
+  return `${options[used.size % options.length]} ${used.size + 1}`;
+}
+
+function makeSummary(players, matches, history) {
   const teamStats = buildTeamStats(matches);
   const owners = buildOwnerMap(players);
   const ranked = players
@@ -224,9 +243,9 @@ function makeSummary(players, matches) {
 
   return {
     generatedAt: new Date().toISOString(),
-    summaryVersion: 3,
+    summaryVersion: 4,
     peopleCount: players.length,
-    headline: "Recent damage report",
+    headline: chooseHeadline(history),
     text:
       `${recentLine} Overall, ${topLine} on ${pointLabel(leader.aggregate.points)}, while ${bottomNames.join(
         ", ",
@@ -265,7 +284,7 @@ async function main() {
   const summaryPeopleChanged =
     existingSummary?.peopleCount !== (playersData?.players || []).length;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
-  const summaryVersionChanged = existingSummary?.summaryVersion !== 3;
+  const summaryVersionChanged = existingSummary?.summaryVersion !== 4;
 
   if (
     !matchDataChanged &&
@@ -288,7 +307,7 @@ async function main() {
     console.log(`Updated ${OUTPUT_FILE} from ${SOURCE_URL}`);
   }
 
-  const summary = makeSummary(playersData?.players || [], fetched.matches || []);
+  const summary = makeSummary(playersData?.players || [], fetched.matches || [], existingHistory);
   await writeFile(SUMMARY_FILE, `${JSON.stringify(summary, null, 2)}\n`);
   await writeFile(
     SUMMARY_HISTORY_FILE,

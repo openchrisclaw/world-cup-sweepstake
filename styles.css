@@ -54,7 +54,7 @@ body {
 }
 
 .site-header {
-  min-height: clamp(420px, 62vh, 680px);
+  min-height: clamp(360px, 52vh, 580px);
   display: block;
 }
 
@@ -141,8 +141,11 @@ body {
 }
 
 .hero {
-  display: grid;
-  min-height: clamp(420px, 62vh, 680px);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 209, 102, 0.18), transparent 30%),
+    linear-gradient(180deg, #091026 0%, #13215c 60%, #0b1026 100%);
+  display: block;
+  min-height: clamp(360px, 52vh, 580px);
   overflow: hidden;
   position: relative;
 }
@@ -321,45 +324,63 @@ body {
 }
 
 .retro-banner {
-  animation: bannerFloat 4s steps(4, end) infinite;
-  background:
-    linear-gradient(90deg, #ef476f 0 12px, transparent 12px calc(100% - 12px), #06d6a0 calc(100% - 12px)),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0 8px, transparent 8px 16px),
-    linear-gradient(135deg, #1f2a78, #10162f 62%, #060914);
+  animation: bannerFloat 5s steps(5, end) infinite;
+  background: #091026;
   border: 8px solid #f8fafc;
-  bottom: clamp(34px, 8vh, 82px);
+  bottom: clamp(28px, 6vh, 56px);
   box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.35);
-  display: grid;
-  grid-template-columns: minmax(0, 1.14fr) minmax(260px, 0.86fr);
-  gap: clamp(14px, 3vw, 34px);
-  height: clamp(260px, 35vw, 420px);
+  height: clamp(280px, 36vw, 430px);
   left: clamp(18px, 6vw, 70px);
-  min-width: 0;
   outline: 8px solid var(--ink);
-  padding: clamp(20px, 3vw, 34px);
   overflow: hidden;
   position: absolute;
   right: clamp(18px, 6vw, 70px);
   z-index: 3;
 }
 
-.banner-text {
-  align-self: center;
-  color: #ffd166;
+.banner-image,
+.banner-overlay {
+  inset: 0;
+  position: absolute;
+}
+
+.banner-image {
   display: block;
-  font-size: clamp(3.2rem, 7.4vw, 7rem);
+  height: 100%;
+  image-rendering: auto;
+  object-fit: cover;
+  object-position: 64% 50%;
+  width: 100%;
+  z-index: 0;
+}
+
+.banner-overlay {
+  background:
+    linear-gradient(90deg, rgba(5, 10, 28, 0.92) 0%, rgba(5, 10, 28, 0.76) 33%, rgba(5, 10, 28, 0.2) 58%, rgba(5, 10, 28, 0.08) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent 26%, rgba(0, 0, 0, 0.28));
+  z-index: 1;
+}
+
+.banner-text {
+  color: #ffe36a;
+  display: block;
+  font-size: clamp(3rem, 7.2vw, 7.1rem);
   font-weight: 700;
   line-height: 0.88;
   margin: 0;
+  max-width: min(9.2ch, 48vw);
   padding: 0;
-  position: relative;
+  position: absolute;
+  left: clamp(22px, 5vw, 70px);
+  top: 50%;
+  transform: translateY(-50%);
   text-align: left;
   text-shadow:
-    5px 0 0 #ef476f,
-    0 5px 0 #ef476f,
-    5px 5px 0 #ef476f,
-    10px 10px 0 #0b1026,
-    15px 15px 0 rgba(0, 0, 0, 0.35);
+    4px 0 0 #0b1026,
+    0 4px 0 #0b1026,
+    4px 4px 0 #0b1026,
+    8px 8px 0 #ef476f,
+    12px 12px 0 rgba(0, 0, 0, 0.48);
   text-transform: uppercase;
   z-index: 2;
 }
@@ -971,11 +992,20 @@ h1 {
 
 @media (max-width: 820px) {
   .site-header {
-    min-height: 560px;
+    min-height: 460px;
   }
 
   .hero {
-    min-height: 560px;
+    min-height: 460px;
+  }
+
+  .retro-banner {
+    height: 390px;
+  }
+
+  .banner-text {
+    font-size: clamp(2.75rem, 11vw, 5rem);
+    max-width: 8.6ch;
   }
 
   .summary-strip,
@@ -1011,6 +1041,11 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  .site-header,
+  .hero {
+    min-height: 430px;
+  }
+
   .site-controls {
     align-items: flex-start;
     flex-direction: column;
@@ -1057,28 +1092,22 @@ h1 {
   }
 
   .retro-banner {
-    grid-template-columns: 1fr;
     bottom: 28px;
     border-width: 6px;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.35);
-    height: 420px;
-    left: 32px;
+    height: 360px;
+    left: 22px;
     outline-width: 6px;
-    padding: 18px;
-    right: auto;
-    width: calc(100vw - 80px);
+    right: 22px;
   }
 
   .banner-text {
-    font-size: clamp(2.2rem, 11vw, 3.25rem);
-    text-align: center;
+    font-size: clamp(2.35rem, 12vw, 3.45rem);
+    left: 20px;
+    max-width: 7.8ch;
   }
 
-  .banner-art {
-    min-height: 185px;
-  }
-
-  .banner-whistle {
-    display: none;
+  .banner-image {
+    object-position: 68% 50%;
   }
 }
