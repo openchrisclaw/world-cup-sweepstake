@@ -381,6 +381,9 @@ function renderAiSummary(summary) {
   if (!summary) return;
   const panel = $("#ai-summary");
   panel.querySelector("h2").textContent = summary.headline || "AI punditry";
+  $("#ai-summary-date").textContent = summary.generatedAt
+    ? formatLondonDateTime(new Date(summary.generatedAt))
+    : "Date TBC";
   panel.querySelector("p:last-child").textContent =
     summary.text || "The model is temporarily pretending to be thoughtful.";
 }

@@ -622,6 +622,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.ai-summary-date {
+  margin: 0 0 12px;
+}
+
 .ai-summary p:last-child {
   color: var(--muted);
   line-height: 1.55;
