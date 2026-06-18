@@ -1,0 +1,36 @@
+{
+  "players": [
+    {
+      "name": "Chris",
+      "team": "Brazil"
+    },
+    {
+      "name": "Asha",
+      "team": "Scotland"
+    },
+    {
+      "name": "Maya",
+      "team": "Mexico"
+    },
+    {
+      "name": "Tom",
+      "team": "Canada"
+    },
+    {
+      "name": "Sam",
+      "team": "South Korea"
+    },
+    {
+      "name": "Priya",
+      "team": "Switzerland"
+    },
+    {
+      "name": "Leo",
+      "team": "Morocco"
+    },
+    {
+      "name": "Nina",
+      "team": "Qatar"
+    }
+  ]
+}

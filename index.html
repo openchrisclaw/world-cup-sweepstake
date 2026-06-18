@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>World Cup Sweepstake</title>
+    <meta
+      name="description"
+      content="A pixel art sweepstake tracker for the 2026 football World Cup."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Sweepstake">
+        <a class="brand" href="#leaderboard" aria-label="World Cup Sweepstake home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>WC Sweepstake</span>
+        </a>
+        <div class="status-pill" id="data-status">Loading results...</div>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="stadium-sky" aria-hidden="true">
+          <span class="cloud cloud-one"></span>
+          <span class="cloud cloud-two"></span>
+          <span class="sun"></span>
+        </div>
+        <div class="pixel-stands" aria-hidden="true"></div>
+        <div class="pitch" aria-hidden="true">
+          <span class="touchline"></span>
+          <span class="centre-circle"></span>
+          <span class="pixel-ball"></span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">2026 football World Cup</p>
+          <h1 id="hero-title">Sweepstake tracker</h1>
+          <p>
+            Live-ish standings for everyone in the draw, powered by a JSON file
+            and hourly match result updates.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="summary-strip" aria-label="Tournament summary">
+        <div>
+          <span class="summary-value" id="player-count">0</span>
+          <span class="summary-label">players</span>
+        </div>
+        <div>
+          <span class="summary-value" id="played-count">0</span>
+          <span class="summary-label">matches played</span>
+        </div>
+        <div>
+          <span class="summary-value" id="goal-count">0</span>
+          <span class="summary-label">goals</span>
+        </div>
+        <div>
+          <span class="summary-value" id="next-kickoff">TBC</span>
+          <span class="summary-label">next match</span>
+        </div>
+      </section>
+
+      <section class="content-band" id="leaderboard">
+        <div class="section-heading">
+          <p class="eyebrow">The draw</p>
+          <h2>Leaderboard</h2>
+        </div>
+        <div class="leaderboard" id="leaderboard-list" aria-live="polite"></div>
+      </section>
+
+      <section class="content-band fixtures-band">
+        <div class="section-heading">
+          <p class="eyebrow">Form guide</p>
+          <h2>Recent and next fixtures</h2>
+        </div>
+        <div class="fixture-grid" id="fixture-list"></div>
+      </section>
+    </main>
+
+    <template id="leader-card-template">
+      <article class="leader-card">
+        <div class="rank"></div>
+        <div class="team-badge"></div>
+        <div class="leader-main">
+          <h3></h3>
+          <p></p>
+          <div class="mini-record"></div>
+        </div>
+        <div class="points-box">
+          <strong></strong>
+          <span>pts</span>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
