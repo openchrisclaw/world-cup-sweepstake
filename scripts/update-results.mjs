@@ -128,8 +128,49 @@ function pointLabel(points) {
   return `${points} point${points === 1 ? "" : "s"}`;
 }
 
+function buildOwnerMap(players) {
+  const owners = new Map();
+  players.forEach((player) => {
+    (player.teams || []).forEach((team) => owners.set(team, player.name));
+  });
+  return owners;
+}
+
+function ownerTeam(team, owners) {
+  const owner = owners.get(team);
+  return owner ? `${team} (${owner})` : team;
+}
+
+function matchVerdict(match, owners, index) {
+  const [score1, score2] = match.score.ft;
+  const team1 = ownerTeam(match.team1, owners);
+  const team2 = ownerTeam(match.team2, owners);
+  const drawLines = [
+    `${team1} and ${team2} split a ${score1}-${score2}, a result with all the menace of a polite handshake.`,
+    `${team1} drew ${score1}-${score2} with ${team2}; nobody gets a parade, nobody has to delete WhatsApp.`,
+  ];
+  const winLines = [
+    (winner, loser, winnerScore, loserScore) =>
+      `${winner} beat ${loser} ${winnerScore}-${loserScore}; points were acquired, dignity was redistributed.`,
+    (winner, loser, winnerScore, loserScore) =>
+      `${winner} slapped a ${winnerScore}-${loserScore} receipt on ${loser}, very arcade cabinet final-boss behaviour.`,
+    (winner, loser, winnerScore, loserScore) =>
+      `${winner} got the glow-up with a ${winnerScore}-${loserScore} win over ${loser}; the loser is now staring meaningfully at the fixtures.`,
+  ];
+
+  if (score1 === score2) return drawLines[index % drawLines.length];
+
+  const homeWin = score1 > score2;
+  const winner = homeWin ? team1 : team2;
+  const loser = homeWin ? team2 : team1;
+  const winnerScore = homeWin ? score1 : score2;
+  const loserScore = homeWin ? score2 : score1;
+  return winLines[index % winLines.length](winner, loser, winnerScore, loserScore);
+}
+
 function makeSummary(players, matches) {
   const teamStats = buildTeamStats(matches);
+  const owners = buildOwnerMap(players);
   const ranked = players
     .map((player) => ({
       ...player,
@@ -147,7 +188,11 @@ function makeSummary(players, matches) {
 
   const leader = ranked[0];
   const runnerUp = ranked[1];
-  const played = matches.filter(hasScore).length;
+  const bottom = ranked[ranked.length - 1];
+  const recent = matches
+    .filter(hasScore)
+    .sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a))
+    .slice(0, 3);
 
   if (!leader) {
     return {
@@ -159,10 +204,6 @@ function makeSummary(players, matches) {
   }
 
   const lead = runnerUp ? leader.aggregate.points - runnerUp.aggregate.points : 0;
-  const leadPhrase =
-    lead > 0
-      ? `${lead} point${lead === 1 ? "" : "s"} clear`
-      : "ahead by the sacred art of tie-break sorcery";
   const pointGroups = new Map();
   ranked.forEach((player) => {
     const points = player.aggregate.points;
@@ -174,20 +215,23 @@ function makeSummary(players, matches) {
     .map(([points, names]) => `${pointLabel(points)}: ${names.join(", ")}`)
     .join("; ");
   const leaderNames = pointGroups.get(leader.aggregate.points) || [leader.name];
-  const bestHelpers = ranked
-    .slice(0, 3)
-    .map((player) => `${player.name}/${player.bestTeam?.team || "mystery XI"}`)
-    .join(", ");
+  const topLine =
+    lead > 0
+      ? `${leader.name} is ${pointLabel(lead)} clear at the top`
+      : `${leaderNames.join(", ")} are sharing top spot by tie-break wizardry`;
+  const bottomNames = pointGroups.get(bottom.aggregate.points) || [bottom.name];
+  const recentLine = recent.map((match, index) => matchVerdict(match, owners, index)).join(" ");
 
   return {
     generatedAt: new Date().toISOString(),
-    summaryVersion: 2,
+    summaryVersion: 3,
     peopleCount: players.length,
-    headline: `${leaderNames.join(", ")} set the pace`,
+    headline: "Recent damage report",
     text:
-      `${leaderNames.join(", ")} lead on ${pointLabel(leader.aggregate.points)}, ${leadPhrase}. ` +
-      `${played} results are in; the table in miniature is ${groupedTable}. ` +
-      `Current chief helpers: ${bestHelpers}. Everyone is named, nobody can hide, and the spreadsheet is already giving main-character energy.`,
+      `${recentLine} Overall, ${topLine} on ${pointLabel(leader.aggregate.points)}, while ${bottomNames.join(
+        ", ",
+      )} are propping up the bracket on ${pointLabel(bottom.aggregate.points)} like unpaid stagehands. ` +
+      `The table snapshot: ${groupedTable}.`,
   };
 }
 
@@ -221,7 +265,7 @@ async function main() {
   const summaryPeopleChanged =
     existingSummary?.peopleCount !== (playersData?.players || []).length;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
-  const summaryVersionChanged = existingSummary?.summaryVersion !== 2;
+  const summaryVersionChanged = existingSummary?.summaryVersion !== 3;
 
   if (
     !matchDataChanged &&
