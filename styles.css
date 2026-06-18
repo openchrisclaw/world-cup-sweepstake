@@ -53,8 +53,20 @@ body {
   mix-blend-mode: multiply;
 }
 
+.sr-only {
+  clip: rect(0 0 0 0);
+  border: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .site-header {
-  min-height: clamp(360px, 52vh, 580px);
+  min-height: clamp(500px, 56vh, 620px);
   display: block;
 }
 
@@ -145,7 +157,7 @@ body {
     radial-gradient(circle at 20% 0%, rgba(255, 209, 102, 0.18), transparent 30%),
     linear-gradient(180deg, #091026 0%, #13215c 60%, #0b1026 100%);
   display: block;
-  min-height: clamp(360px, 52vh, 580px);
+  min-height: clamp(500px, 56vh, 620px);
   overflow: hidden;
   position: relative;
 }
@@ -1043,7 +1055,7 @@ h1 {
 @media (max-width: 520px) {
   .site-header,
   .hero {
-    min-height: 430px;
+    min-height: 220px;
   }
 
   .site-controls {
@@ -1092,13 +1104,15 @@ h1 {
   }
 
   .retro-banner {
-    bottom: 28px;
+    aspect-ratio: 2172 / 724;
+    bottom: auto;
     border-width: 6px;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.35);
-    height: 360px;
+    height: auto;
     left: 22px;
     outline-width: 6px;
     right: 22px;
+    top: 28px;
   }
 
   .banner-text {
@@ -1108,6 +1122,6 @@ h1 {
   }
 
   .banner-image {
-    object-position: 68% 50%;
+    object-position: 50% 50%;
   }
 }
