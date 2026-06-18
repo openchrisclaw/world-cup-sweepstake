@@ -22,7 +22,8 @@ Each person gets three teams. Team names should match the names used in
 
 ## Result updates
 
-The `Update World Cup Results` GitHub Actions workflow runs hourly and fetches:
+The `Update World Cup Results` GitHub Actions workflow runs once per day at
+7am BST during the tournament and fetches:
 
 ```text
 https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json

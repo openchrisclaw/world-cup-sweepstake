@@ -13,39 +13,21 @@
   </head>
   <body>
     <div class="scanline" aria-hidden="true"></div>
-    <header class="history-header">
-      <nav class="topbar" aria-label="Sweepstake">
-        <a class="brand" href="index.html" aria-label="World Cup Sweepstake home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Haynes Sweepstake</span>
-        </a>
+    <main>
+      <section class="site-controls" aria-label="Site controls">
         <div class="nav-links">
           <a href="index.html">Table</a>
           <a href="history.html">History</a>
         </div>
         <div class="status-pill" id="history-status">Loading history...</div>
-      </nav>
-      <div class="history-title">
-        <p class="eyebrow">Archive room</p>
-        <h1>History</h1>
-      </div>
-    </header>
-
-    <main>
-      <section class="content-band history-band" aria-labelledby="summary-history-title">
-        <div class="section-heading">
-          <p class="eyebrow">AI punditry</p>
-          <h2 id="summary-history-title">Previous summaries</h2>
-        </div>
-        <div class="history-list" id="summary-history-list"></div>
       </section>
 
-      <section class="content-band" aria-labelledby="result-history-title">
+      <section class="content-band history-band" aria-labelledby="history-feed-title">
         <div class="section-heading">
-          <p class="eyebrow">Final whistles</p>
-          <h2 id="result-history-title">All results</h2>
+          <p class="eyebrow">Newest first</p>
+          <h2 id="history-feed-title">History</h2>
         </div>
-        <div class="result-list" id="result-history-list"></div>
+        <div class="history-list" id="history-feed-list"></div>
       </section>
     </main>
 

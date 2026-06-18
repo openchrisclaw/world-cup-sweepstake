@@ -147,7 +147,6 @@ function makeSummary(players, matches) {
 
   const leader = ranked[0];
   const runnerUp = ranked[1];
-  const basement = ranked[ranked.length - 1];
   const played = matches.filter(hasScore).length;
 
   if (!leader) {
@@ -160,38 +159,35 @@ function makeSummary(players, matches) {
   }
 
   const lead = runnerUp ? leader.aggregate.points - runnerUp.aggregate.points : 0;
-  const bestTeam = leader.bestTeam?.team || "mystery football";
-  const bestTeamPoints = leader.bestTeam?.stats.points || 0;
   const leadPhrase =
     lead > 0
       ? `${lead} point${lead === 1 ? "" : "s"} clear`
       : "ahead by the sacred art of tie-break sorcery";
-  const jokes = [
-    "is marching around like they own the fixture list",
-    "is quietly spreadsheeting their way into relevance",
-    "has the calm expression of someone pretending this was the plan",
-    "is relying on vibes, goal difference, and a small tactical candle",
-    "has entered the dangerous phase known as mathematically interesting",
-    "is hovering mid-table with strong 'wait until the knockouts' energy",
-    "is currently negotiating with fate via three nervous group-stage teams",
-  ];
-  const rollCall = ranked
-    .map((player, index) => {
-      const best = player.bestTeam?.team || "their mystery XI";
-      const verb = jokes[index % jokes.length];
-      return `${player.name} ${verb}: ${pointLabel(player.aggregate.points)}, with ${best} as the chief supplier of hope.`;
-    })
-    .join(" ");
+  const pointGroups = new Map();
+  ranked.forEach((player) => {
+    const points = player.aggregate.points;
+    if (!pointGroups.has(points)) pointGroups.set(points, []);
+    pointGroups.get(points).push(player.name);
+  });
+  const groupedTable = [...pointGroups.entries()]
+    .sort((a, b) => b[0] - a[0])
+    .map(([points, names]) => `${pointLabel(points)}: ${names.join(", ")}`)
+    .join("; ");
+  const leaderNames = pointGroups.get(leader.aggregate.points) || [leader.name];
+  const bestHelpers = ranked
+    .slice(0, 3)
+    .map((player) => `${player.name}/${player.bestTeam?.team || "mystery XI"}`)
+    .join(", ");
 
   return {
     generatedAt: new Date().toISOString(),
+    summaryVersion: 2,
     peopleCount: players.length,
-    headline: `${leader.name} is top of the Haynes heap`,
+    headline: `${leaderNames.join(", ")} set the pace`,
     text:
-      `${leader.name} leads with ${leader.aggregate.points} points, ${leadPhrase}. ` +
-      `${bestTeam} is doing the heavy lifting with ${bestTeamPoints} points, ` +
-      `which is the sort of delegation strategy consultants charge for. ` +
-      `${played} matches are in the books. Full roll call: ${rollCall}`,
+      `${leaderNames.join(", ")} lead on ${pointLabel(leader.aggregate.points)}, ${leadPhrase}. ` +
+      `${played} results are in; the table in miniature is ${groupedTable}. ` +
+      `Current chief helpers: ${bestHelpers}. Everyone is named, nobody can hide, and the spreadsheet is already giving main-character energy.`,
   };
 }
 
@@ -225,13 +221,15 @@ async function main() {
   const summaryPeopleChanged =
     existingSummary?.peopleCount !== (playersData?.players || []).length;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
+  const summaryVersionChanged = existingSummary?.summaryVersion !== 2;
 
   if (
     !matchDataChanged &&
     !summaryMissing &&
     !summaryPlaceholder &&
     !summaryPeopleChanged &&
-    !summaryHasOldPlural
+    !summaryHasOldPlural &&
+    !summaryVersionChanged
   ) {
     console.log("Fetched latest results; no match data changes found.");
     return;
