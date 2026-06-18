@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>World Cup Sweepstake</title>
+    <title>Haynes World Cup 2026 Sweepstake</title>
     <meta
       name="description"
       content="A pixel art sweepstake tracker for the 2026 football World Cup."
@@ -17,7 +17,7 @@
       <nav class="topbar" aria-label="Sweepstake">
         <a class="brand" href="#leaderboard" aria-label="World Cup Sweepstake home">
           <span class="brand-mark" aria-hidden="true"></span>
-          <span>WC Sweepstake</span>
+          <span>Haynes Sweepstake</span>
         </a>
         <div class="status-pill" id="data-status">Loading results...</div>
       </nav>
@@ -28,19 +28,18 @@
           <span class="cloud cloud-two"></span>
           <span class="sun"></span>
         </div>
-        <div class="pixel-stands" aria-hidden="true"></div>
         <div class="pitch" aria-hidden="true">
           <span class="touchline"></span>
           <span class="centre-circle"></span>
+          <span class="pixel-player player-one"></span>
+          <span class="pixel-player player-two"></span>
+          <span class="pixel-player player-three"></span>
+          <span class="pixel-player player-four"></span>
           <span class="pixel-ball"></span>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow">2026 football World Cup</p>
-          <h1 id="hero-title">Sweepstake tracker</h1>
-          <p>
-            Live-ish standings for everyone in the draw, powered by a JSON file
-            and hourly match result updates.
-          </p>
+          <p class="eyebrow">Football World Cup</p>
+          <h1 id="hero-title">Haynes World Cup 2026 Sweepstake</h1>
         </div>
       </section>
     </header>
@@ -49,7 +48,7 @@
       <section class="summary-strip" aria-label="Tournament summary">
         <div>
           <span class="summary-value" id="player-count">0</span>
-          <span class="summary-label">players</span>
+          <span class="summary-label">people</span>
         </div>
         <div>
           <span class="summary-value" id="played-count">0</span>
@@ -62,6 +61,14 @@
         <div>
           <span class="summary-value" id="next-kickoff">TBC</span>
           <span class="summary-label">next match</span>
+        </div>
+      </section>
+
+      <section class="ai-summary-band" aria-labelledby="ai-summary-title">
+        <div class="ai-summary" id="ai-summary">
+          <p class="eyebrow">AI punditry</p>
+          <h2 id="ai-summary-title">Waiting for the first proper wobble.</h2>
+          <p>Once the hourly update sees a result change, this will get spicy.</p>
         </div>
       </section>
 
@@ -85,10 +92,9 @@
     <template id="leader-card-template">
       <article class="leader-card">
         <div class="rank"></div>
-        <div class="team-badge"></div>
         <div class="leader-main">
           <h3></h3>
-          <p></p>
+          <div class="team-picks"></div>
           <div class="mini-record"></div>
         </div>
         <div class="points-box">

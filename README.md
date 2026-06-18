@@ -1,4 +1,4 @@
-# World Cup Sweepstake
+# Haynes World Cup 2026 Sweepstake
 
 A static, pixel-art sweepstake tracker for the 2026 football World Cup.
 
@@ -17,7 +17,8 @@ Update `data/players.json`:
 }
 ```
 
-Team names should match the names used in `data/worldcup.json`.
+Each person gets three teams. Team names should match the names used in
+`data/worldcup.json`.
 
 ## Result updates
 
@@ -27,8 +28,9 @@ The `Update World Cup Results` GitHub Actions workflow runs hourly and fetches:
 https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json
 ```
 
-Each run commits the latest fetched `data/worldcup.json` with a refreshed
-`lastUpdated` timestamp.
+Each run fetches the latest source data. If the match data changed, it commits
+the updated `data/worldcup.json` and a fresh amusing summary in
+`data/summary.json`.
 
 ## Local preview
 

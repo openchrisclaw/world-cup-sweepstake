@@ -2,35 +2,35 @@
   "players": [
     {
       "name": "Chris",
-      "team": "Brazil"
+      "teams": ["Brazil", "England", "Japan"]
     },
     {
       "name": "Asha",
-      "team": "Scotland"
+      "teams": ["Scotland", "France", "Morocco"]
     },
     {
       "name": "Maya",
-      "team": "Mexico"
+      "teams": ["Mexico", "Spain", "South Korea"]
     },
     {
       "name": "Tom",
-      "team": "Canada"
+      "teams": ["Canada", "Germany", "Ghana"]
     },
     {
       "name": "Sam",
-      "team": "South Korea"
+      "teams": ["Argentina", "Switzerland", "Qatar"]
     },
     {
       "name": "Priya",
-      "team": "Switzerland"
+      "teams": ["Portugal", "USA", "South Africa"]
     },
     {
       "name": "Leo",
-      "team": "Morocco"
+      "teams": ["Netherlands", "Uruguay", "Senegal"]
     },
     {
       "name": "Nina",
-      "team": "Qatar"
+      "teams": ["Belgium", "Australia", "Colombia"]
     }
   ]
 }
