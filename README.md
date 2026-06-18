@@ -27,7 +27,8 @@ The `Update World Cup Results` GitHub Actions workflow runs hourly and fetches:
 https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json
 ```
 
-When the fetched data changes, the workflow commits the updated `data/worldcup.json`.
+Each run commits the latest fetched `data/worldcup.json` with a refreshed
+`lastUpdated` timestamp.
 
 ## Local preview
 
