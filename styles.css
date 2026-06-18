@@ -66,7 +66,7 @@ body {
 }
 
 .site-header {
-  min-height: clamp(500px, 56vh, 620px);
+  min-height: 0;
   display: block;
 }
 
@@ -157,7 +157,7 @@ body {
     radial-gradient(circle at 20% 0%, rgba(255, 209, 102, 0.18), transparent 30%),
     linear-gradient(180deg, #091026 0%, #13215c 60%, #0b1026 100%);
   display: block;
-  min-height: clamp(500px, 56vh, 620px);
+  min-height: 0;
   overflow: hidden;
   position: relative;
 }
@@ -336,34 +336,28 @@ body {
 }
 
 .retro-banner {
-  animation: bannerFloat 5s steps(5, end) infinite;
+  animation: none;
+  aspect-ratio: 2172 / 724;
   background: #091026;
-  border: 8px solid #f8fafc;
-  bottom: clamp(28px, 6vh, 56px);
-  box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.35);
-  height: clamp(280px, 36vw, 430px);
-  left: clamp(18px, 6vw, 70px);
-  outline: 8px solid var(--ink);
+  border: 0;
+  box-shadow: none;
+  display: block;
+  height: auto;
+  outline: 0;
   overflow: hidden;
-  position: absolute;
-  right: clamp(18px, 6vw, 70px);
-  z-index: 3;
+  position: relative;
+  width: 100%;
 }
 
 .banner-image,
 .banner-overlay {
-  inset: 0;
-  position: absolute;
+  display: block;
 }
 
 .banner-image {
-  display: block;
-  height: 100%;
+  height: auto;
   image-rendering: auto;
-  object-fit: cover;
-  object-position: 64% 50%;
   width: 100%;
-  z-index: 0;
 }
 
 .banner-overlay {
@@ -559,6 +553,9 @@ h1 {
 
 .summary-strip > div {
   background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   min-width: 0;
   padding: 18px clamp(12px, 2vw, 26px);
 }
@@ -566,7 +563,10 @@ h1 {
 .summary-value,
 .summary-label {
   display: block;
+  max-width: 100%;
+  min-width: 0;
   overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .summary-value {
@@ -574,12 +574,18 @@ h1 {
   font-size: clamp(1.15rem, 3vw, 2rem);
   font-weight: 700;
   line-height: 1.15;
+  order: 2;
 }
 
 .summary-label {
   font-size: 0.78rem;
-  margin-top: 4px;
+  margin-top: 0;
+  order: 1;
   text-transform: uppercase;
+}
+
+#next-kickoff span {
+  display: block;
 }
 
 .content-band {
@@ -604,6 +610,8 @@ h1 {
   box-shadow: var(--shadow);
   margin: 0 auto;
   max-width: 1180px;
+  min-width: 0;
+  overflow: hidden;
   padding: clamp(18px, 3vw, 28px);
 }
 
@@ -618,6 +626,8 @@ h1 {
   color: var(--muted);
   line-height: 1.55;
   margin-bottom: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .section-heading {
@@ -1003,26 +1013,12 @@ h1 {
 }
 
 @media (max-width: 820px) {
-  .site-header {
-    min-height: 460px;
-  }
-
-  .hero {
-    min-height: 460px;
-  }
-
-  .retro-banner {
-    height: 390px;
-  }
-
-  .banner-text {
-    font-size: clamp(2.75rem, 11vw, 5rem);
-    max-width: 8.6ch;
-  }
-
-  .summary-strip,
-  .fixture-grid {
+  .summary-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fixture-grid {
+    grid-template-columns: 1fr;
   }
 
   .section-heading {
@@ -1053,9 +1049,23 @@ h1 {
 }
 
 @media (max-width: 520px) {
-  .site-header,
-  .hero {
-    min-height: 220px;
+  .ai-summary-band,
+  .content-band {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .ai-summary,
+  .leader-card,
+  .fixture-card {
+    box-shadow: 5px 5px 0 rgba(9, 13, 31, 0.24);
+  }
+
+  .ai-summary {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: calc(100vw - 36px);
+    width: 300px;
   }
 
   .site-controls {
@@ -1101,27 +1111,5 @@ h1 {
   .summary-strip,
   .fixture-grid {
     grid-template-columns: 1fr;
-  }
-
-  .retro-banner {
-    aspect-ratio: 2172 / 724;
-    bottom: auto;
-    border-width: 6px;
-    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.35);
-    height: auto;
-    left: 22px;
-    outline-width: 6px;
-    right: 22px;
-    top: 28px;
-  }
-
-  .banner-text {
-    font-size: clamp(2.35rem, 12vw, 3.45rem);
-    left: 20px;
-    max-width: 7.8ch;
-  }
-
-  .banner-image {
-    object-position: 50% 50%;
   }
 }

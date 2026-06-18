@@ -1,74 +1,74 @@
 {
   "players": [
     {
-      "name": "Chris",
-      "teams": ["Brazil", "England", "Japan"],
+      "name": "Alex",
+      "teams": ["England", "Japan", "New Zealand"],
       "avatar": { "skin": "#f0b27a", "hair": "#2d1b12", "shirt": "#ef476f" }
     },
     {
-      "name": "Asha",
-      "teams": ["Scotland", "France", "Morocco"],
-      "avatar": { "skin": "#8d5524", "hair": "#111827", "shirt": "#118ab2" }
+      "name": "Caroline",
+      "teams": ["Czech Republic", "Ecuador", "France"],
+      "avatar": { "skin": "#f1c27d", "hair": "#8b3a2b", "shirt": "#118ab2" }
     },
     {
-      "name": "Maya",
-      "teams": ["Mexico", "Spain", "South Korea"],
-      "avatar": { "skin": "#c68642", "hair": "#3b2416", "shirt": "#ffd166" }
+      "name": "Chris",
+      "teams": ["Bosnia & Herzegovina", "Colombia", "Turkey"],
+      "avatar": { "skin": "#e0ac69", "hair": "#2f1b10", "shirt": "#2563eb" }
     },
     {
-      "name": "Tom",
-      "teams": ["Canada", "Germany", "Ghana"],
-      "avatar": { "skin": "#f1c27d", "hair": "#6b3f22", "shirt": "#06d6a0" }
+      "name": "Chris Haynes",
+      "teams": ["Curaçao", "Germany", "South Korea"],
+      "avatar": { "skin": "#f0b27a", "hair": "#3b2416", "shirt": "#06d6a0" }
     },
     {
-      "name": "Sam",
-      "teams": ["Argentina", "Switzerland", "Qatar"],
-      "avatar": { "skin": "#e0ac69", "hair": "#1f2937", "shirt": "#2563eb" }
+      "name": "Emily",
+      "teams": ["Iran", "Netherlands", "Panama", "Sweden"],
+      "avatar": { "skin": "#c68642", "hair": "#512d1a", "shirt": "#ffd166" }
     },
     {
-      "name": "Priya",
-      "teams": ["Portugal", "USA", "South Africa"],
-      "avatar": { "skin": "#a0522d", "hair": "#111111", "shirt": "#ef476f" }
+      "name": "Grandad",
+      "teams": ["Austria", "Ivory Coast", "Spain"],
+      "avatar": { "skin": "#f2c894", "hair": "#d1d5db", "shirt": "#ef476f" }
     },
     {
-      "name": "Leo",
-      "teams": ["Netherlands", "Uruguay", "Senegal"],
-      "avatar": { "skin": "#d6a77a", "hair": "#4b2e18", "shirt": "#f4b942" }
+      "name": "Henry",
+      "teams": ["Canada", "Croatia", "Qatar", "Scotland"],
+      "avatar": { "skin": "#f1c27d", "hair": "#7c4a21", "shirt": "#118ab2" }
     },
     {
-      "name": "Nina",
-      "teams": ["Belgium", "Australia", "Colombia"],
-      "avatar": { "skin": "#b87a4b", "hair": "#29180f", "shirt": "#06d6a0" }
+      "name": "Jack",
+      "teams": ["DR Congo", "Haiti", "Portugal", "Switzerland"],
+      "avatar": { "skin": "#d6a77a", "hair": "#111827", "shirt": "#f4b942" }
     },
     {
-      "name": "Owen",
-      "teams": ["Croatia", "Sweden", "Norway"],
-      "avatar": { "skin": "#f2c894", "hair": "#7c4a21", "shirt": "#118ab2" }
+      "name": "Max",
+      "teams": ["Brazil", "Norway", "Paraguay", "Saudi Arabia"],
+      "avatar": { "skin": "#e0ac69", "hair": "#1f2937", "shirt": "#06d6a0" }
     },
     {
-      "name": "Grace",
-      "teams": ["Austria", "Turkey", "Egypt"],
-      "avatar": { "skin": "#f0b27a", "hair": "#8b3a2b", "shirt": "#ef476f" }
+      "name": "Nana",
+      "teams": ["Argentina", "Australia", "Uzbekistan"],
+      "avatar": { "skin": "#f2c894", "hair": "#d1d5db", "shirt": "#2563eb" }
     },
     {
-      "name": "Ben",
-      "teams": ["Ecuador", "Paraguay", "Saudi Arabia"],
-      "avatar": { "skin": "#e0ac69", "hair": "#2f1b10", "shirt": "#ffd166" }
+      "name": "Rosaria",
+      "teams": ["Algeria", "Mexico", "South Africa"],
+      "avatar": { "skin": "#c68642", "hair": "#29180f", "shirt": "#ef476f" }
     },
     {
-      "name": "Ella",
-      "teams": ["Iran", "Tunisia", "Algeria"],
-      "avatar": { "skin": "#c68642", "hair": "#151515", "shirt": "#2563eb" }
+      "name": "Sara",
+      "teams": ["Ghana", "Morocco", "Tunisia", "Uruguay"],
+      "avatar": { "skin": "#a0522d", "hair": "#111111", "shirt": "#ffd166" }
     },
     {
-      "name": "Ravi",
-      "teams": ["Ivory Coast", "New Zealand", "Panama"],
-      "avatar": { "skin": "#8d5524", "hair": "#111827", "shirt": "#06d6a0" }
+      "name": "Sofia",
+      "teams": ["Egypt", "Iraq", "Jordan", "Senegal"],
+      "avatar": { "skin": "#b87a4b", "hair": "#151515", "shirt": "#06d6a0" }
     },
     {
-      "name": "Zoe",
-      "teams": ["Czech Republic", "Bosnia & Herzegovina", "Uzbekistan"],
-      "avatar": { "skin": "#f1c27d", "hair": "#512d1a", "shirt": "#f4b942" }
+      "name": "Vicki",
+      "teams": ["Belgium", "Cape Verde", "USA"],
+      "avatar": { "skin": "#f1c27d", "hair": "#6b3f22", "shirt": "#118ab2" }
     }
   ]
 }

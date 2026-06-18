@@ -128,6 +128,16 @@ function pointLabel(points) {
   return `${points} point${points === 1 ? "" : "s"}`;
 }
 
+function nameList(names) {
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} and ${names[1]}`;
+  return `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}`;
+}
+
+function nameVerb(names) {
+  return names.length === 1 ? "is" : "are";
+}
+
 function buildOwnerMap(players) {
   const owners = new Map();
   players.forEach((player) => {
@@ -146,16 +156,16 @@ function matchVerdict(match, owners, index) {
   const team1 = ownerTeam(match.team1, owners);
   const team2 = ownerTeam(match.team2, owners);
   const drawLines = [
-    `${team1} and ${team2} split a ${score1}-${score2}, a result with all the menace of a polite handshake.`,
-    `${team1} drew ${score1}-${score2} with ${team2}; nobody gets a parade, nobody has to delete WhatsApp.`,
+    `${team1} and ${team2} drew ${score1}-${score2}, which is useful if you enjoy shrugs with your spreadsheet.`,
+    `${team1} and ${team2} shared a ${score1}-${score2}; nobody wins, nobody loses, everyone pretends this is fine.`,
   ];
   const winLines = [
     (winner, loser, winnerScore, loserScore) =>
-      `${winner} beat ${loser} ${winnerScore}-${loserScore}; points were acquired, dignity was redistributed.`,
+      `${winner} beat ${loser} ${winnerScore}-${loserScore}, so that owner gets to be unbearable for at least one group chat message.`,
     (winner, loser, winnerScore, loserScore) =>
-      `${winner} slapped a ${winnerScore}-${loserScore} receipt on ${loser}, very arcade cabinet final-boss behaviour.`,
+      `${winner} turned over ${loser} ${winnerScore}-${loserScore}; a tidy little points delivery with no signature required.`,
     (winner, loser, winnerScore, loserScore) =>
-      `${winner} got the glow-up with a ${winnerScore}-${loserScore} win over ${loser}; the loser is now staring meaningfully at the fixtures.`,
+      `${winner} saw off ${loser} ${winnerScore}-${loserScore}, leaving the losing owner checking the rules for emotional compensation.`,
   ];
 
   if (score1 === score2) return drawLines[index % drawLines.length];
@@ -171,16 +181,16 @@ function matchVerdict(match, owners, index) {
 function chooseHeadline(history) {
   const used = new Set((history?.summaries || []).map((summary) => summary.headline));
   const options = [
-    "Boot Room Bulletin",
-    "Penalty Box Gossip",
-    "Golden Boot Gobbets",
-    "Touchline Trouble",
-    "Group Stage Grumbles",
-    "Fixture Fallout",
-    "Goalmouth Gossip",
-    "Whistle Blown, Tea Spilled",
-    "Table Tantrum Watch",
-    "Net Botherers Report",
+    "Sweepstake Sofa Report",
+    "Kitchen Table VAR",
+    "The Mildly Biased Briefing",
+    "Spreadsheet Shenanigans",
+    "Points, Panic and Biscuits",
+    "The Group Chat Gloat",
+    "Fixtures With Feelings",
+    "The Totally Calm Update",
+    "Cup Nerves Bulletin",
+    "The Bragging Rights Memo",
   ];
   const fresh = options.find((title) => !used.has(title));
   if (fresh) return fresh;
@@ -237,20 +247,38 @@ function makeSummary(players, matches, history) {
   const topLine =
     lead > 0
       ? `${leader.name} is ${pointLabel(lead)} clear at the top`
-      : `${leaderNames.join(", ")} are sharing top spot by tie-break wizardry`;
+      : `${nameList(leaderNames)} ${nameVerb(
+          leaderNames,
+        )} sharing top spot by tie-break wizardry`;
   const bottomNames = pointGroups.get(bottom.aggregate.points) || [bottom.name];
-  const recentLine = recent.map((match, index) => matchVerdict(match, owners, index)).join(" ");
+  const recentLine =
+    recent.map((match, index) => matchVerdict(match, owners, index)).join(" ") ||
+    "No fresh results have landed, so the sweepstake is briefly pretending to be a calm household.";
+  const runnerUpNames = runnerUp
+    ? pointGroups.get(runnerUp.aggregate.points) || [runnerUp.name]
+    : [];
+  const chasingLine = runnerUp
+    ? `${nameList(runnerUpNames)} ${nameVerb(
+        runnerUpNames,
+      )} nearest in the rear-view mirror on ${pointLabel(
+        runnerUp.aggregate.points,
+      )}`
+    : "nobody else has made the table interesting yet";
 
   return {
     generatedAt: new Date().toISOString(),
-    summaryVersion: 4,
+    summaryVersion: 7,
     peopleCount: players.length,
     headline: chooseHeadline(history),
     text:
-      `${recentLine} Overall, ${topLine} on ${pointLabel(leader.aggregate.points)}, while ${bottomNames.join(
+      `Right then: ${recentLine} Overall, ${topLine} with ${pointLabel(
+        leader.aggregate.points,
+      )}; ${chasingLine}. Down in the bargain bin, ${bottomNames.join(
         ", ",
-      )} are propping up the bracket on ${pointLabel(bottom.aggregate.points)} like unpaid stagehands. ` +
-      `The table snapshot: ${groupedTable}.`,
+      )} ${nameVerb(bottomNames)} on ${pointLabel(
+        bottom.aggregate.points,
+      )}, bravely proving that patience is a strategy. ` +
+      `Current points gossip: ${groupedTable}.`,
   };
 }
 
@@ -284,7 +312,7 @@ async function main() {
   const summaryPeopleChanged =
     existingSummary?.peopleCount !== (playersData?.players || []).length;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
-  const summaryVersionChanged = existingSummary?.summaryVersion !== 4;
+  const summaryVersionChanged = existingSummary?.summaryVersion !== 7;
 
   if (
     !matchDataChanged &&

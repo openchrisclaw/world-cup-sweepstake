@@ -17,6 +17,7 @@ const flagProfiles = {
   "Cape Verde": ["#003893", "#ffffff", "#cf2027"],
   Colombia: ["#fcd116", "#003893", "#ce1126"],
   Croatia: ["#ff0000", "#ffffff", "#171796"],
+  "Curaçao": ["#002b7f", "#f9e814", "#ffffff"],
   "Czech Republic": ["#ffffff", "#d7141a", "#11457e"],
   "DR Congo": ["#007fff", "#f7d618", "#ce1021"],
   Ecuador: ["#ffdd00", "#034ea2", "#ed1c24"],
@@ -358,11 +359,22 @@ function renderSummary(players, matches, owners) {
   $("#player-count").textContent = players.length;
   $("#played-count").textContent = played.length;
   $("#goal-count").textContent = goals;
-  $("#next-kickoff").textContent = next
-    ? `${next.team1} (${owners.get(next.team1) || "unpicked"}) v ${next.team2} (${owners.get(
-        next.team2,
-      ) || "unpicked"}) / ${formatLondonDateTime(next)}`
-    : "TBC";
+  const nextKickoff = $("#next-kickoff");
+  nextKickoff.replaceChildren();
+  if (!next) {
+    nextKickoff.textContent = "TBC";
+    return;
+  }
+
+  [
+    `${next.team1} (${owners.get(next.team1) || "unpicked"})`,
+    `v ${next.team2} (${owners.get(next.team2) || "unpicked"})`,
+    formatLondonDateTime(next),
+  ].forEach((line) => {
+    const item = document.createElement("span");
+    item.textContent = line;
+    nextKickoff.append(item);
+  });
 }
 
 function renderAiSummary(summary) {
