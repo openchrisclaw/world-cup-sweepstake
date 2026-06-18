@@ -245,8 +245,12 @@ function createTeamLabel(team, owners) {
   return label;
 }
 
-function formatLondonDateTime(match) {
-  if (!match) return "TBC";
+function formatLondonDateTime(value) {
+  if (!value) return "TBC";
+  const date =
+    value instanceof Date || typeof value === "string"
+      ? new Date(value)
+      : new Date(getMatchTimestamp(value));
   return new Intl.DateTimeFormat("en-GB", {
     timeZone: LONDON_TIME_ZONE,
     weekday: "short",
@@ -255,7 +259,7 @@ function formatLondonDateTime(match) {
     hour: "numeric",
     minute: "2-digit",
     timeZoneName: "short",
-  }).format(new Date(getMatchTimestamp(match)));
+  }).format(date);
 }
 
 function formatMeta(match) {
