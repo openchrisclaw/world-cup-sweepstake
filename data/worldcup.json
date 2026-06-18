@@ -72,6 +72,29 @@
       "time": "12:00 UTC-4",
       "team1": "Czech Republic",
       "team2": "South Africa",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Michal Sadílek",
+          "minute": 6
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Teboho Mokoena",
+          "minute": 83,
+          "penalty": true
+        }
+      ],
       "group": "Group A",
       "ground": "Atlanta"
     },
@@ -1585,6 +1608,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-18T15:05:25.995Z",
+  "lastUpdated": "2026-06-18T18:14:40.349Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
