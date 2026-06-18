@@ -1068,8 +1068,6 @@ h1 {
   .ai-summary {
     margin-left: 0;
     margin-right: 0;
-    max-width: calc(100vw - 36px);
-    width: 300px;
   }
 
   .site-controls {
