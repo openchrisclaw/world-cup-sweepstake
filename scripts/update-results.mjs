@@ -7,6 +7,8 @@ const OUTPUT_FILE = path.resolve("data/worldcup.json");
 const PLAYERS_FILE = path.resolve("data/players.json");
 const SUMMARY_FILE = path.resolve("data/summary.json");
 const SUMMARY_HISTORY_FILE = path.resolve("data/summary-history.json");
+const SUMMARY_VERSION = 8;
+const SUMMARY_HISTORY_VERSION = 2;
 
 async function readJson(file) {
   try {
@@ -197,7 +199,7 @@ function chooseHeadline(history) {
   return `${options[used.size % options.length]} ${used.size + 1}`;
 }
 
-function makeSummary(players, matches, history) {
+function makeSummary(players, matches, history, options = {}) {
   const teamStats = buildTeamStats(matches);
   const owners = buildOwnerMap(players);
   const ranked = players
@@ -218,14 +220,17 @@ function makeSummary(players, matches, history) {
   const leader = ranked[0];
   const runnerUp = ranked[1];
   const bottom = ranked[ranked.length - 1];
-  const recent = matches
-    .filter(hasScore)
-    .sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a))
-    .slice(0, 3);
+  const recent =
+    options.recentMatches ||
+    matches
+      .filter(hasScore)
+      .sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a))
+      .slice(0, 3);
 
   if (!leader) {
     return {
-      generatedAt: new Date().toISOString(),
+      generatedAt: options.generatedAt || new Date().toISOString(),
+      summaryVersion: SUMMARY_VERSION,
       peopleCount: 0,
       headline: "No managers, no drama.",
       text: "The AI pundit has checked the teamsheet and found only tumbleweed.",
@@ -266,8 +271,8 @@ function makeSummary(players, matches, history) {
     : "nobody else has made the table interesting yet";
 
   return {
-    generatedAt: new Date().toISOString(),
-    summaryVersion: 7,
+    generatedAt: options.generatedAt || new Date().toISOString(),
+    summaryVersion: SUMMARY_VERSION,
     peopleCount: players.length,
     headline: chooseHeadline(history),
     text:
@@ -285,8 +290,42 @@ function makeSummary(players, matches, history) {
 function appendSummary(history, summary) {
   const summaries = Array.isArray(history?.summaries) ? history.summaries : [];
   return {
+    historyVersion: SUMMARY_HISTORY_VERSION,
     summaries: [...summaries, summary],
   };
+}
+
+function matchDayGeneratedAt(date) {
+  const [year, month, day] = date.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day + 1, 6, 0, 0)).toISOString();
+}
+
+function buildMatchDaySummaryHistory(players, matches) {
+  const scored = matches.filter(hasScore).sort((a, b) => getMatchTimestamp(a) - getMatchTimestamp(b));
+  const byDate = new Map();
+  scored.forEach((match) => {
+    if (!byDate.has(match.date)) byDate.set(match.date, []);
+    byDate.get(match.date).push(match);
+  });
+
+  const history = {
+    historyVersion: SUMMARY_HISTORY_VERSION,
+    summaries: [],
+  };
+  const cumulative = [];
+
+  [...byDate.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .forEach(([date, dayMatches]) => {
+      cumulative.push(...dayMatches);
+      const summary = makeSummary(players, cumulative, history, {
+        generatedAt: matchDayGeneratedAt(date),
+        recentMatches: [...dayMatches].sort((a, b) => getMatchTimestamp(b) - getMatchTimestamp(a)),
+      });
+      history.summaries.push(summary);
+    });
+
+  return history;
 }
 
 async function main() {
@@ -312,7 +351,8 @@ async function main() {
   const summaryPeopleChanged =
     existingSummary?.peopleCount !== (playersData?.players || []).length;
   const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
-  const summaryVersionChanged = existingSummary?.summaryVersion !== 7;
+  const summaryVersionChanged = existingSummary?.summaryVersion !== SUMMARY_VERSION;
+  const summaryHistoryChanged = existingHistory?.historyVersion !== SUMMARY_HISTORY_VERSION;
 
   if (
     !matchDataChanged &&
@@ -320,7 +360,8 @@ async function main() {
     !summaryPlaceholder &&
     !summaryPeopleChanged &&
     !summaryHasOldPlural &&
-    !summaryVersionChanged
+    !summaryVersionChanged &&
+    !summaryHistoryChanged
   ) {
     console.log("Fetched latest results; no match data changes found.");
     return;
@@ -335,11 +376,20 @@ async function main() {
     console.log(`Updated ${OUTPUT_FILE} from ${SOURCE_URL}`);
   }
 
-  const summary = makeSummary(playersData?.players || [], fetched.matches || [], existingHistory);
+  const players = playersData?.players || [];
+  const matches = fetched.matches || [];
+  const history = summaryHistoryChanged
+    ? buildMatchDaySummaryHistory(players, matches)
+    : existingHistory;
+  const summary = summaryHistoryChanged
+    ? history.summaries?.at(-1) || makeSummary(players, matches, history)
+    : makeSummary(players, matches, history);
+  const outputHistory = summaryHistoryChanged ? history : appendSummary(existingHistory, summary);
+
   await writeFile(SUMMARY_FILE, `${JSON.stringify(summary, null, 2)}\n`);
   await writeFile(
     SUMMARY_HISTORY_FILE,
-    `${JSON.stringify(appendSummary(existingHistory, summary), null, 2)}\n`,
+    `${JSON.stringify(outputHistory, null, 2)}\n`,
   );
   console.log(`Updated ${SUMMARY_FILE}`);
   console.log(`Updated ${SUMMARY_HISTORY_FILE}`);
