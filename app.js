@@ -221,6 +221,17 @@ function createFlag(team) {
   return flag;
 }
 
+function createAvatar(player) {
+  const avatar = document.createElement("span");
+  const colors = player.avatar || {};
+  avatar.className = "pixel-avatar-face";
+  avatar.style.setProperty("--skin", colors.skin || "#f1c27d");
+  avatar.style.setProperty("--hair", colors.hair || "#2d1b12");
+  avatar.style.setProperty("--shirt", colors.shirt || "#118ab2");
+  avatar.setAttribute("aria-hidden", "true");
+  return avatar;
+}
+
 function createTeamLabel(team, owners) {
   const label = document.createElement("span");
   label.className = "team-label";
@@ -282,6 +293,7 @@ function renderLeaderboard(players, stats) {
     const teamPicks = node.querySelector(".team-picks");
 
     node.querySelector(".rank").textContent = `#${index + 1}`;
+    node.querySelector(".pixel-avatar").append(createAvatar(player));
     node.querySelector("h3").textContent = player.name;
     playerTeams(player).forEach((team) => {
       const chip = document.createElement("span");

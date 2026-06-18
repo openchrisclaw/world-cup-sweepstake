@@ -30,7 +30,13 @@ https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/wor
 
 Each run fetches the latest source data. If the match data changed, it commits
 the updated `data/worldcup.json` and a fresh amusing summary in
-`data/summary.json`.
+`data/summary.json`, appending the old punditry trail to
+`data/summary-history.json`.
+
+## Pages
+
+- `index.html` shows the current leaderboard, latest summary, and recent/upcoming fixtures.
+- `history.html` lists all completed results and all previous AI summaries.
 
 ## Local preview
 

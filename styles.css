@@ -83,6 +83,26 @@ body {
   text-transform: uppercase;
 }
 
+.nav-links {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 8px;
+  justify-content: center;
+}
+
+.nav-links a {
+  background: #ffffff;
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 9px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .brand-mark {
   aspect-ratio: 1;
   background:
@@ -113,6 +133,20 @@ body {
   min-height: calc(92vh - 72px);
   overflow: hidden;
   position: relative;
+}
+
+.history-header {
+  background: var(--sky);
+  border-bottom: 7px solid var(--ink);
+  min-height: 38vh;
+}
+
+.history-title {
+  padding: clamp(34px, 8vw, 82px) clamp(18px, 6vw, 70px);
+}
+
+.history-title h1 {
+  margin-bottom: 0;
 }
 
 .stadium-sky {
@@ -283,6 +317,140 @@ body {
   z-index: 4;
 }
 
+.retro-banner {
+  animation: bannerFloat 4s steps(4, end) infinite;
+  background:
+    linear-gradient(90deg, #ef476f 0 8px, transparent 8px calc(100% - 8px), #118ab2 calc(100% - 8px)),
+    repeating-linear-gradient(90deg, #fff7df 0 18px, #f6e8ba 18px 36px);
+  border: 7px solid var(--ink);
+  bottom: clamp(26px, 7vh, 74px);
+  box-shadow: 10px 10px 0 rgba(20, 33, 61, 0.22);
+  height: clamp(118px, 20vw, 190px);
+  left: clamp(18px, 6vw, 70px);
+  overflow: hidden;
+  position: absolute;
+  right: clamp(18px, 6vw, 70px);
+  z-index: 3;
+}
+
+.banner-text {
+  color: var(--ink);
+  display: block;
+  font-size: clamp(2.2rem, 9vw, 6.7rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: clamp(22px, 4vw, 42px) 18px 0;
+  text-align: center;
+  text-shadow: 4px 4px 0 #ffffff;
+  text-transform: uppercase;
+}
+
+.banner-item {
+  image-rendering: pixelated;
+  position: absolute;
+}
+
+.banner-ball {
+  animation: iconHop 2.5s steps(3, end) infinite;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 35% 35%, var(--ink) 0 10%, transparent 11%),
+    radial-gradient(circle at 65% 62%, var(--ink) 0 11%, transparent 12%),
+    #ffffff;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  bottom: 15px;
+  left: 8%;
+  width: 34px;
+}
+
+.banner-boot {
+  animation: bootKick 3.2s steps(4, end) infinite;
+  background: #111827;
+  bottom: 20px;
+  height: 18px;
+  left: 21%;
+  width: 48px;
+}
+
+.banner-boot::after {
+  background: #f4b942;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: -14px;
+  top: 8px;
+  width: 18px;
+}
+
+.banner-cup {
+  background: var(--gold);
+  border: 4px solid var(--ink);
+  height: 54px;
+  right: 18%;
+  top: 18px;
+  width: 42px;
+}
+
+.banner-cup::before,
+.banner-cup::after {
+  border: 4px solid var(--ink);
+  content: "";
+  height: 22px;
+  position: absolute;
+  top: 8px;
+  width: 18px;
+}
+
+.banner-cup::before {
+  border-right: 0;
+  left: -22px;
+}
+
+.banner-cup::after {
+  border-left: 0;
+  right: -22px;
+}
+
+.banner-card {
+  animation: cardFlash 2s steps(2, end) infinite;
+  background: #ffd166;
+  border: 3px solid var(--ink);
+  height: 42px;
+  right: 7%;
+  top: 26px;
+  width: 28px;
+}
+
+.banner-whistle {
+  background: #d9f3ff;
+  border: 3px solid var(--ink);
+  bottom: 24px;
+  height: 24px;
+  right: 28%;
+  width: 42px;
+}
+
+.banner-whistle::after {
+  background: var(--ink);
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: -11px;
+  top: 6px;
+  width: 13px;
+}
+
+.banner-scarf {
+  animation: scarfWave 3.4s steps(4, end) infinite;
+  background: repeating-linear-gradient(90deg, #ef476f 0 14px, #ffffff 14px 28px);
+  border: 3px solid var(--ink);
+  height: 22px;
+  left: 40%;
+  top: 17px;
+  width: 96px;
+}
+
 .eyebrow {
   color: var(--score);
   font-size: 0.82rem;
@@ -406,7 +574,7 @@ h1 {
   box-shadow: var(--shadow);
   display: grid;
   gap: 14px;
-  grid-template-columns: 52px minmax(0, 1fr) 78px;
+  grid-template-columns: 52px 62px minmax(0, 1fr) 78px;
   min-height: 102px;
   padding: 13px;
 }
@@ -429,6 +597,40 @@ h1 {
 
 .leader-main {
   min-width: 0;
+}
+
+.pixel-avatar {
+  align-items: center;
+  display: flex;
+  height: 62px;
+  justify-content: center;
+  width: 62px;
+}
+
+.pixel-avatar-face {
+  background:
+    linear-gradient(var(--hair) 0 20%, transparent 20%),
+    linear-gradient(90deg, var(--hair) 0 18%, transparent 18% 82%, var(--hair) 82%),
+    radial-gradient(circle at 34% 48%, var(--ink) 0 5%, transparent 6%),
+    radial-gradient(circle at 66% 48%, var(--ink) 0 5%, transparent 6%),
+    linear-gradient(var(--skin) 0 72%, var(--shirt) 72%);
+  border: 4px solid var(--ink);
+  box-shadow: 4px 4px 0 rgba(20, 33, 61, 0.2);
+  display: block;
+  height: 52px;
+  image-rendering: pixelated;
+  position: relative;
+  width: 46px;
+}
+
+.pixel-avatar-face::after {
+  background: var(--ink);
+  bottom: 18px;
+  content: "";
+  height: 3px;
+  left: 18px;
+  position: absolute;
+  width: 10px;
 }
 
 .leader-main h3 {
@@ -556,6 +758,44 @@ h1 {
   margin-top: 12px;
 }
 
+.history-band {
+  background: #d8f3dc;
+}
+
+.history-list,
+.result-list {
+  display: grid;
+  gap: 14px;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.history-card,
+.result-card {
+  background: #ffffff;
+  border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 rgba(20, 33, 61, 0.14);
+  padding: 16px;
+}
+
+.history-card h3 {
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.history-card p:last-child {
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.history-score {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
 .empty-state,
 .error-state {
   background: #ffffff;
@@ -612,6 +852,56 @@ h1 {
   }
 }
 
+@keyframes bannerFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes iconHop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes bootKick {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes cardFlash {
+  0%,
+  100% {
+    background: #ffd166;
+  }
+  50% {
+    background: #ef476f;
+  }
+}
+
+@keyframes scarfWave {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(12px);
+  }
+}
+
 @keyframes ballRoll {
   0% {
     transform: translateX(0) rotate(0deg);
@@ -654,7 +944,7 @@ h1 {
   }
 
   .leader-card {
-    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-columns: 42px 52px minmax(0, 1fr);
     padding: 11px;
   }
 
@@ -686,6 +976,12 @@ h1 {
     width: 100%;
   }
 
+  .nav-links {
+    justify-content: flex-start;
+    order: 3;
+    width: 100%;
+  }
+
   h1 {
     max-width: 10ch;
   }
@@ -698,5 +994,20 @@ h1 {
   .summary-strip,
   .fixture-grid {
     grid-template-columns: 1fr;
+  }
+
+  .retro-banner {
+    bottom: 28px;
+    height: 112px;
+  }
+
+  .banner-text {
+    font-size: 2rem;
+    padding-top: 30px;
+  }
+
+  .banner-scarf,
+  .banner-whistle {
+    display: none;
   }
 }

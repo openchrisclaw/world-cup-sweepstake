@@ -6,6 +6,7 @@ const SOURCE_URL =
 const OUTPUT_FILE = path.resolve("data/worldcup.json");
 const PLAYERS_FILE = path.resolve("data/players.json");
 const SUMMARY_FILE = path.resolve("data/summary.json");
+const SUMMARY_HISTORY_FILE = path.resolve("data/summary-history.json");
 
 async function readJson(file) {
   try {
@@ -123,6 +124,10 @@ function bestTeamFor(player, teamStats) {
     })[0];
 }
 
+function pointLabel(points) {
+  return `${points} point${points === 1 ? "" : "s"}`;
+}
+
 function makeSummary(players, matches) {
   const teamStats = buildTeamStats(matches);
   const ranked = players
@@ -148,6 +153,7 @@ function makeSummary(players, matches) {
   if (!leader) {
     return {
       generatedAt: new Date().toISOString(),
+      peopleCount: 0,
       headline: "No managers, no drama.",
       text: "The AI pundit has checked the teamsheet and found only tumbleweed.",
     };
@@ -160,18 +166,39 @@ function makeSummary(players, matches) {
     lead > 0
       ? `${lead} point${lead === 1 ? "" : "s"} clear`
       : "ahead by the sacred art of tie-break sorcery";
-  const footer = basement
-    ? `Meanwhile ${basement.name} is studying the table with the haunted focus of someone trying to assemble furniture without the instructions.`
-    : "";
+  const jokes = [
+    "is marching around like they own the fixture list",
+    "is quietly spreadsheeting their way into relevance",
+    "has the calm expression of someone pretending this was the plan",
+    "is relying on vibes, goal difference, and a small tactical candle",
+    "has entered the dangerous phase known as mathematically interesting",
+    "is hovering mid-table with strong 'wait until the knockouts' energy",
+    "is currently negotiating with fate via three nervous group-stage teams",
+  ];
+  const rollCall = ranked
+    .map((player, index) => {
+      const best = player.bestTeam?.team || "their mystery XI";
+      const verb = jokes[index % jokes.length];
+      return `${player.name} ${verb}: ${pointLabel(player.aggregate.points)}, with ${best} as the chief supplier of hope.`;
+    })
+    .join(" ");
 
   return {
     generatedAt: new Date().toISOString(),
+    peopleCount: players.length,
     headline: `${leader.name} is top of the Haynes heap`,
     text:
       `${leader.name} leads with ${leader.aggregate.points} points, ${leadPhrase}. ` +
       `${bestTeam} is doing the heavy lifting with ${bestTeamPoints} points, ` +
       `which is the sort of delegation strategy consultants charge for. ` +
-      `${played} matches are in the books. ${footer}`,
+      `${played} matches are in the books. Full roll call: ${rollCall}`,
+  };
+}
+
+function appendSummary(history, summary) {
+  const summaries = Array.isArray(history?.summaries) ? history.summaries : [];
+  return {
+    summaries: [...summaries, summary],
   };
 }
 
@@ -189,13 +216,23 @@ async function main() {
   const fetched = await response.json();
   const existing = await readJson(OUTPUT_FILE);
   const existingSummary = await readJson(SUMMARY_FILE);
+  const existingHistory = await readJson(SUMMARY_HISTORY_FILE);
   const playersData = await readJson(PLAYERS_FILE);
   const matchDataChanged =
     JSON.stringify(stripMeta(existing)) !== JSON.stringify(stripMeta(fetched));
   const summaryMissing = !existingSummary;
   const summaryPlaceholder = !existingSummary?.generatedAt;
+  const summaryPeopleChanged =
+    existingSummary?.peopleCount !== (playersData?.players || []).length;
+  const summaryHasOldPlural = existingSummary?.text?.includes("1 points");
 
-  if (!matchDataChanged && !summaryMissing && !summaryPlaceholder) {
+  if (
+    !matchDataChanged &&
+    !summaryMissing &&
+    !summaryPlaceholder &&
+    !summaryPeopleChanged &&
+    !summaryHasOldPlural
+  ) {
     console.log("Fetched latest results; no match data changes found.");
     return;
   }
@@ -211,7 +248,12 @@ async function main() {
 
   const summary = makeSummary(playersData?.players || [], fetched.matches || []);
   await writeFile(SUMMARY_FILE, `${JSON.stringify(summary, null, 2)}\n`);
+  await writeFile(
+    SUMMARY_HISTORY_FILE,
+    `${JSON.stringify(appendSummary(existingHistory, summary), null, 2)}\n`,
+  );
   console.log(`Updated ${SUMMARY_FILE}`);
+  console.log(`Updated ${SUMMARY_HISTORY_FILE}`);
 }
 
 main().catch((error) => {
