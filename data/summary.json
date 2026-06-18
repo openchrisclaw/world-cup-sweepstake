@@ -1,7 +1,10 @@
 {
   "generatedAt": "2026-06-18T06:00:00.000Z",
-  "summaryVersion": 8,
+  "summaryVersion": 9,
+  "source": "openai",
+  "model": "gpt-5.4-mini",
+  "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
   "peopleCount": 14,
-  "headline": "Fixtures With Feelings",
-  "text": "Right then: Colombia (Chris) beat Uzbekistan (Nana) 3-1, so that owner gets to be unbearable for at least one group chat message. Ghana (Sara) turned over Panama (Emily) 1-0; a tidy little points delivery with no signature required. England (Alex) saw off Croatia (Henry) 4-2, leaving the losing owner checking the rules for emotional compensation. Portugal (Jack) and DR Congo (Jack) shared a 1-1; nobody wins, nobody loses, everyone pretends this is fine. Overall, Grandad is 1 point clear at the top with 7 points; Nana and Chris Haynes are nearest in the rear-view mirror on 6 points. Down in the bargain bin, Sofia is on 1 point, bravely proving that patience is a strategy. Current points gossip: 7 points: Grandad; 6 points: Nana, Chris Haynes; 5 points: Emily, Vicki, Alex, Max, Henry, Sara; 4 points: Chris; 3 points: Caroline, Jack, Rosaria; 1 point: Sofia."
+  "headline": "England Fly, Panama Pack Their Bags",
+  "text": "A good night for Alex as England battered Croatia 4-2, while Sara nicked a 1-0 win for Ghana over Panama. Chris also kept Colombia ticking with a 3-1 success against Nana’s Uzbekistan, and Jack shared the spoils in a 1-1 with DR Congo. Top of the pile is still Grandad on 7, with Nana and Christopher next on 6. At the wrong end, Sofia remains stuck on 1, while Rosaria, Jack and Carolina are all still trying to find a decent run of form."
 }

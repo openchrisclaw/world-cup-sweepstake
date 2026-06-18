@@ -1,54 +1,75 @@
 {
-  "historyVersion": 2,
+  "historyVersion": 3,
   "summaries": [
     {
       "generatedAt": "2026-06-12T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "Sweepstake Sofa Report",
-      "text": "Right then: South Korea (Chris Haynes) beat Czech Republic (Caroline) 2-1, so that owner gets to be unbearable for at least one group chat message. Mexico (Rosaria) turned over South Africa (Rosaria) 2-0; a tidy little points delivery with no signature required. Overall, Chris Haynes and Rosaria are sharing top spot by tie-break wizardry with 3 points; Chris Haynes and Rosaria are nearest in the rear-view mirror on 3 points. Down in the bargain bin, Alex, Chris, Emily, Grandad, Henry, Jack, Max, Nana, Sara, Sofia, Vicki, Caroline are on 0 points, bravely proving that patience is a strategy. Current points gossip: 3 points: Chris Haynes, Rosaria; 0 points: Alex, Chris, Emily, Grandad, Henry, Jack, Max, Nana, Sara, Sofia, Vicki, Caroline."
+      "headline": "Christopher and Rosaria Pounce Early",
+      "text": "A tidy opening day for Christopher and Rosaria. Christopher’s South Korea nicked a 2-1 win over Carolina’s Czech Republic, while Rosaria doubled up as Mexico beat Rosaria’s South Africa 2-0. So Christopher leads on goal difference, with Rosaria right behind on points. Carolina is the early straggler after that narrow defeat, and South Africa are off to a rum start too. Best overall: Christopher. Worst overall: Carolina. Plenty of time left, of course, but the table’s already got a bit of a swagger about it."
     },
     {
       "generatedAt": "2026-06-13T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "Kitchen Table VAR",
-      "text": "Right then: USA (Vicki) beat Paraguay (Max) 4-1, so that owner gets to be unbearable for at least one group chat message. Canada (Henry) and Bosnia & Herzegovina (Chris) shared a 1-1; nobody wins, nobody loses, everyone pretends this is fine. Overall, Vicki, Chris Haynes and Rosaria are sharing top spot by tie-break wizardry with 3 points; Vicki, Chris Haynes and Rosaria are nearest in the rear-view mirror on 3 points. Down in the bargain bin, Alex, Emily, Grandad, Jack, Nana, Sara, Sofia, Caroline, Max are on 0 points, bravely proving that patience is a strategy. Current points gossip: 3 points: Vicki, Chris Haynes, Rosaria; 1 point: Chris, Henry; 0 points: Alex, Emily, Grandad, Jack, Nana, Sara, Sofia, Caroline, Max."
+      "headline": "Vicki Storms Clear, Max Left in the Mire",
+      "text": "Vicki’s USA thumped Max’s Paraguay 4-1, the day’s big swing and a proper boost to the top of the table. Meanwhile Henry’s Canada and Chris’s Bosnia & Herzegovina played out a tidy 1-1, so neither’s running away with it just yet. Best overall is still Vicki on 3 points and a cracking +3 goal difference. Christopher and Rosaria are also on 3, but Vicki’s got the better numbers. At the other end, Max is having a grim time at the foot of the pile on 0 points and -3. Plenty of tournament left, but that’s a nasty early wobble."
     },
     {
       "generatedAt": "2026-06-14T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "The Mildly Biased Briefing",
-      "text": "Right then: Australia (Nana) beat Turkey (Chris) 2-0, so that owner gets to be unbearable for at least one group chat message. Scotland (Henry) turned over Haiti (Jack) 1-0; a tidy little points delivery with no signature required. Brazil (Max) and Morocco (Sara) drew 1-1, which is useful if you enjoy shrugs with your spreadsheet. Qatar (Henry) and Switzerland (Jack) shared a 1-1; nobody wins, nobody loses, everyone pretends this is fine. Overall, Henry is 2 points clear at the top with 5 points; Vicki, Nana, Chris Haynes and Rosaria are nearest in the rear-view mirror on 3 points. Down in the bargain bin, Alex, Emily, Grandad, Sofia, Caroline are on 0 points, bravely proving that patience is a strategy. Current points gossip: 5 points: Henry; 3 points: Vicki, Nana, Chris Haynes, Rosaria; 1 point: Sara, Jack, Chris, Max; 0 points: Alex, Emily, Grandad, Sofia, Caroline."
+      "headline": "Nana Lands a Peach, Henry Hang On",
+      "text": "Australia did the business for Nana, while Henry’s Scotland and Qatar both pinched points, keeping him top of the lot on 5. Jack had a mixed day: Scotland beat his Haiti, but Switzerland’s draw at least stopped the rot. Chris’s Turkey fell 2-0 to Nana, and Max could only share the spoils with Morocco. Best overall is Henry, still leading the sweep; worst is the 0-point gang, with Alex, Emily, Grandad and Sofia yet to get off the mark. A proper scrap at the top, that."
     },
     {
       "generatedAt": "2026-06-15T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "Spreadsheet Shenanigans",
-      "text": "Right then: Sweden (Emily) beat Tunisia (Sara) 5-1, so that owner gets to be unbearable for at least one group chat message. Ivory Coast (Grandad) turned over Ecuador (Caroline) 1-0; a tidy little points delivery with no signature required. Netherlands (Emily) and Japan (Alex) drew 2-2, which is useful if you enjoy shrugs with your spreadsheet. Germany (Chris Haynes) beat Curaçao (Chris Haynes) 7-1, so that owner gets to be unbearable for at least one group chat message. Overall, Chris Haynes is 1 point clear at the top with 6 points; Henry is nearest in the rear-view mirror on 5 points. Down in the bargain bin, Sofia, Caroline are on 0 points, bravely proving that patience is a strategy. Current points gossip: 6 points: Chris Haynes; 5 points: Henry; 4 points: Emily; 3 points: Vicki, Nana, Grandad, Rosaria; 1 point: Alex, Jack, Chris, Max, Sara; 0 points: Sofia, Caroline."
+      "headline": "Christopher’s Chasing the Chips",
+      "text": "Big day for Christopher: Germany’s 7-1 rout over Curaçao was a proper demolition job, while Emily also had a belter with Sweden thumping Tunisia 5-1. Grandad edged Carolina 1-0, so he’s nicked a useful point too. At the other end, Sara took a hiding with Tunisia and Carolina’s still rooted to the bottom after that narrow loss. Overall, Christopher’s top of the pile on 6 points, with Henry just behind on 5. Emily’s next in with 4, looking lively. Spare a thought for Carolina: no points, grim goal difference, and the wooden spoon is waving at her already."
     },
     {
       "generatedAt": "2026-06-16T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "Points, Panic and Biscuits",
-      "text": "Right then: Iran (Emily) and New Zealand (Alex) drew 2-2, which is useful if you enjoy shrugs with your spreadsheet. Saudi Arabia (Max) and Uruguay (Sara) shared a 1-1; nobody wins, nobody loses, everyone pretends this is fine. Belgium (Vicki) and Egypt (Sofia) drew 1-1, which is useful if you enjoy shrugs with your spreadsheet. Spain (Grandad) and Cape Verde (Vicki) shared a 0-0; nobody wins, nobody loses, everyone pretends this is fine. Overall, Chris Haynes is 1 point clear at the top with 6 points; Emily, Vicki and Henry are nearest in the rear-view mirror on 5 points. Down in the bargain bin, Caroline is on 0 points, bravely proving that patience is a strategy. Current points gossip: 6 points: Chris Haynes; 5 points: Emily, Vicki, Henry; 4 points: Grandad; 3 points: Nana, Rosaria; 2 points: Alex, Max, Sara; 1 point: Sofia, Jack, Chris; 0 points: Caroline."
+      "headline": "Draws on the board, chaos in the pub",
+      "text": "A proper day of stalemates: Iran and New Zealand shared four goals, while Saudi Arabia v Uruguay, Belgium v Egypt, and Spain v Cape Verde all finished level. That’s decent enough for Emily and Alex, plus Max, Sara, Sofia, Vicki and Grandad to keep things ticking over. Top of the lot is still Christopher on 6, though Emily and Vicki are breathing down his neck on 5. At the other end, Carolina remains marooned on 0, with Jack, Chris and Sofia stuck on 1. Not much drama in the results, but the table’s still got a few dodgy exits at the bottom."
     },
     {
       "generatedAt": "2026-06-17T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "The Group Chat Gloat",
-      "text": "Right then: Austria (Grandad) beat Jordan (Sofia) 3-1, so that owner gets to be unbearable for at least one group chat message. Argentina (Nana) turned over Algeria (Rosaria) 3-0; a tidy little points delivery with no signature required. Norway (Max) saw off Iraq (Sofia) 4-1, leaving the losing owner checking the rules for emotional compensation. France (Caroline) beat Senegal (Sofia) 3-1, so that owner gets to be unbearable for at least one group chat message. Overall, Grandad is 1 point clear at the top with 7 points; Nana and Chris Haynes are nearest in the rear-view mirror on 6 points. Down in the bargain bin, Jack, Chris, Sofia are on 1 point, bravely proving that patience is a strategy. Current points gossip: 7 points: Grandad; 6 points: Nana, Chris Haynes; 5 points: Emily, Vicki, Henry, Max; 3 points: Caroline, Rosaria; 2 points: Alex, Sara; 1 point: Jack, Chris, Sofia."
+      "headline": "Grandad Gathers Pace as Sofia’s Day Goes Awry",
+      "text": "A tidy day for Grandad, with Austria and Spain both doing the business, and Nana’s Argentina also swatting aside Algeria. Max enjoyed a proper belter as Norway thumped Iraq 4-1, while Carolina picked up a useful France win. At the other end, Sofia had a stinker: Jordan, Iraq and Senegal all lost, with only Egypt left to rescue pride. Overall, Grandad stays top on 7 points, with Nana and Christopher pressing close behind on 6. Sofia remains bottom on 1 point, still stuck in the mud and looking for a miracle or a very large favour."
     },
     {
       "generatedAt": "2026-06-18T06:00:00.000Z",
-      "summaryVersion": 8,
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
       "peopleCount": 14,
-      "headline": "Fixtures With Feelings",
-      "text": "Right then: Colombia (Chris) beat Uzbekistan (Nana) 3-1, so that owner gets to be unbearable for at least one group chat message. Ghana (Sara) turned over Panama (Emily) 1-0; a tidy little points delivery with no signature required. England (Alex) saw off Croatia (Henry) 4-2, leaving the losing owner checking the rules for emotional compensation. Portugal (Jack) and DR Congo (Jack) shared a 1-1; nobody wins, nobody loses, everyone pretends this is fine. Overall, Grandad is 1 point clear at the top with 7 points; Nana and Chris Haynes are nearest in the rear-view mirror on 6 points. Down in the bargain bin, Sofia is on 1 point, bravely proving that patience is a strategy. Current points gossip: 7 points: Grandad; 6 points: Nana, Chris Haynes; 5 points: Emily, Vicki, Alex, Max, Henry, Sara; 4 points: Chris; 3 points: Caroline, Jack, Rosaria; 1 point: Sofia."
+      "headline": "England Fly, Panama Pack Their Bags",
+      "text": "A good night for Alex as England battered Croatia 4-2, while Sara nicked a 1-0 win for Ghana over Panama. Chris also kept Colombia ticking with a 3-1 success against Nana’s Uzbekistan, and Jack shared the spoils in a 1-1 with DR Congo. Top of the pile is still Grandad on 7, with Nana and Christopher next on 6. At the wrong end, Sofia remains stuck on 1, while Rosaria, Jack and Carolina are all still trying to find a decent run of form."
     }
   ]
 }
