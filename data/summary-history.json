@@ -1,1 +1,75 @@
-{}
+{
+  "historyVersion": 3,
+  "summaries": [
+    {
+      "generatedAt": "2026-06-12T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Christopher and Rosaria on the sauce, Carolina in the mire",
+      "text": "Christopher’s South Korea nicked a 2-1 win over Carolina’s Czech Republic, while Rosaria had a tidy 2-0 with Mexico against South Africa. That makes Christopher the early front-runner, top on 3 points with the best goal difference, with Rosaria also on 3 and looking rather smug. Spare a thought for Carolina, who’s bottom after that opening wobble. Everyone else is still stuck on the starting blocks, so the rest of the sweepstake is having a proper lie-in."
+    },
+    {
+      "generatedAt": "2026-06-13T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Vicki runs riot while Max is in a proper pickle",
+      "text": "Vicki was the big winner this round, with the United States of America battering Paraguay 4-1. Meanwhile, Henry and Chris had to share the points after Canada and Bosnia & Herzegovina drew 1-1. That means Vicki stays top overall and looking rather smug, while Christopher and Rosaria are still clinging to the chase. At the other end, Max is the main loser after that heavy defeat, and remains bottom. Carolina is also in the red, while Alex, Emily, Grandad, Jack, Nana, Sara, and Sofia are still waiting for a proper nibble from their teams."
+    },
+    {
+      "generatedAt": "2026-06-14T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Scotland nick it, Turkey and Brazil have a stinker",
+      "text": "A tidy night for Henry, with Scotland doing the business against Haiti and Qatar earning a draw, so he stays top of the shop. Nana also had a belter as Australia beat Turkey 2-0. At the other end, Chris took the bruising with Turkey falling flat, while Jack and Max both had frustrating draws with Haiti and Switzerland, and Brazil only managed a point. Best overall is still Henry on 5 points. Worst are Alex, Emily, Grandad and Sofia, all stuck on 0, with Carolina not far behind on 0 and a worse goal difference than most."
+    },
+    {
+      "generatedAt": "2026-06-15T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Christopher cashes in as Sara and Carolina have a grim afternoon",
+      "text": "What a day for Christopher: Germany battered Curaçao 7-1, and he stays top of the lot. Emily also had a belter, with Sweden smashing Tunisia 5-1, though the Netherlands and Japan shared the spoils. At the other end, Sara and Carolina both took proper knocks, with Tunisia and Ecuador coming off second best. Grandad did nick a win with Ivory Coast, which is tidy enough. Overall, Christopher leads the sweepstake on 6 points, with Henry right behind on 5. At the basement, Sofia and Carolina are still on 0, which is a bit bleak."
+    },
+    {
+      "generatedAt": "2026-06-16T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Handbags at the back as the draws do the damage",
+      "text": "A draw-fest has left a few scratching their heads. Emily, Alex, Max, Sara, Vicki and Sofia all shared the spoils, while Grandad’s Spain could only muster a blank against Vicki’s Cape Verde. The big winner remains Christopher out in front on 6 points, with Emily and Vicki hot on his heels. At the other end, Carolina is still stuck on 0, while Jack, Chris and Sofia are all in the danger mud on 1 point apiece. So it’s Christopher wearing the crown for now, and Carolina doing a fine impression of a rain-soaked programme."
+    },
+    {
+      "generatedAt": "2026-06-17T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Grandad top of the pops as Sofia takes a walloping",
+      "text": "Big day for Grandad and Nana: Austria and Argentina both won convincingly, so they’re grinning like loons. Max also had a handy boost with Norway’s 4-1 win over Iraq. At the other end, Sofia had a proper nightmare: Jordan, Iraq and Senegal all lost, and her only bright spot was much less bright than that sounds. Carolina’s France also won, keeping her in the mix. Overall, Grandad leads the lot on 7 points, with Nana and Christopher breathing down the necks on 6. Worst off is Sofia, stuck on 1 point and looking distinctly fed up."
+    },
+    {
+      "generatedAt": "2026-06-18T06:00:00.000Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Chris chinks his glass while Henry and Jack take a knock",
+      "text": "Colombia gave Christopher a tidy 3-1 win over Uzbekistan, and England had a lovely old laugh, 4-2 against Croatia, so Alex is purring. Ghana’s 1-0 squeak over Panama also helped Sara a touch. Meanwhile, Henry and Jack both had a bit of a rough one, with Croatia and Portugal failing to get the job done. At the top, Grandad still leads the lot on 7 points, with Nana and Christopher breathing down his neck on 6. At the other end, Sofia remains rooted to the bottom on 1 point. Not exactly champagne football, that."
+    }
+  ]
+}
