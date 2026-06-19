@@ -104,6 +104,23 @@
       "time": "19:00 UTC-6",
       "team1": "Mexico",
       "team2": "South Korea",
+      "score": {
+        "ft": [
+          1,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Luis Romo",
+          "minute": 50
+        }
+      ],
+      "goals2": [],
       "group": "Group A",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -195,6 +212,43 @@
       "time": "12:00 UTC-7",
       "team1": "Switzerland",
       "team2": "Bosnia & Herzegovina",
+      "score": {
+        "ft": [
+          4,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Johan Manzambi",
+          "minute": 74
+        },
+        {
+          "name": "Rubén Vargas",
+          "minute": 84
+        },
+        {
+          "name": "Granit Xhaka",
+          "minute": 90,
+          "offset": 7,
+          "penalty": true
+        },
+        {
+          "name": "Johan Manzambi",
+          "minute": 90
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Ermin Mahmic",
+          "minute": 90,
+          "offset": 3
+        }
+      ],
       "group": "Group B",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -204,6 +258,46 @@
       "time": "15:00 UTC-7",
       "team1": "Canada",
       "team2": "Qatar",
+      "score": {
+        "ft": [
+          6,
+          0
+        ],
+        "ht": [
+          3,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Cyle Larin",
+          "minute": 16
+        },
+        {
+          "name": "Jonathan David",
+          "minute": 29
+        },
+        {
+          "name": "Jonathan David",
+          "minute": 45,
+          "offset": 3
+        },
+        {
+          "name": "Nathan Saliba",
+          "minute": 64
+        },
+        {
+          "name": "Mohamed Manai",
+          "minute": 75,
+          "owngoal": true
+        },
+        {
+          "name": "Jonathan David",
+          "minute": 90,
+          "offset": 2
+        }
+      ],
+      "goals2": [],
       "group": "Group B",
       "ground": "Vancouver"
     },
@@ -1608,6 +1702,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-18T18:14:40.349Z",
+  "lastUpdated": "2026-06-19T06:35:14.598Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
