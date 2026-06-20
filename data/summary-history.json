@@ -80,6 +80,16 @@
       "peopleCount": 14,
       "headline": "Henry turns the screw as Sofia’s season goes pear-shaped",
       "text": "Henry had the day out, with Canada smashing Qatar 6-0 to keep him top of the pile. Jack also fancied it, as Switzerland beat Bosnia & Herzegovina 4-1. Rosaria got a tidy win too, with Mexico edging South Korea 1-0. At the wrong end, Christopher took a bump, and Chris had a rough one as Bosnia & Herzegovina were punted. Overall, Henry is best with 8 points, while Sofia is bottom with 1 point and looking distinctly wobbly."
+    },
+    {
+      "generatedAt": "2026-06-20T05:00:31.047Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Max and Vicki on the lash, Nana left with the crumbs",
+      "text": "Brazil (Max) and USA (Vicki) were the big winners, both bagging clean-sheet wins. Morocco (Sara) also nicked it, leaving Scotland (Henry) with a sore one. At the other end, Jack and Nana had a grim old shift, both beaten without scoring. Overall, Vicki stays top with 8 points and the best goal difference, while Max is right on the case in second on 8. At the bottom, Sofia is still in the mud on 1 point, with Chris and Carolina also needing a proper turnaround."
     }
   ]
 }

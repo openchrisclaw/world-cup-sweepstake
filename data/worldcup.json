@@ -382,6 +382,23 @@
       "time": "18:00 UTC-4",
       "team1": "Scotland",
       "team2": "Morocco",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Ismael Saibari",
+          "minute": 2
+        }
+      ],
       "group": "Group C",
       "ground": "Boston (Foxborough)"
     },
@@ -391,6 +408,32 @@
       "time": "20:30 UTC-4",
       "team1": "Brazil",
       "team2": "Haiti",
+      "score": {
+        "ft": [
+          3,
+          0
+        ],
+        "ht": [
+          3,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Matheus Cunha",
+          "minute": 23
+        },
+        {
+          "name": "Matheus Cunha",
+          "minute": 36
+        },
+        {
+          "name": "Vinícius Júnior",
+          "minute": 45,
+          "offset": 3
+        }
+      ],
+      "goals2": [],
       "group": "Group C",
       "ground": "Philadelphia"
     },
@@ -494,6 +537,28 @@
       "time": "12:00 UTC-7",
       "team1": "USA",
       "team2": "Australia",
+      "score": {
+        "ft": [
+          2,
+          0
+        ],
+        "ht": [
+          2,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Cameron Burgess",
+          "minute": 11,
+          "owngoal": true
+        },
+        {
+          "name": "Alex Freeman",
+          "minute": 43
+        }
+      ],
+      "goals2": [],
       "group": "Group D",
       "ground": "Seattle"
     },
@@ -1702,6 +1767,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-19T06:35:14.598Z",
+  "lastUpdated": "2026-06-20T05:00:31.042Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
