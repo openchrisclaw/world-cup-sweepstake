@@ -568,6 +568,23 @@
       "time": "20:00 UTC-7",
       "team1": "Turkey",
       "team2": "Paraguay",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Matías Galarza",
+          "minute": 2
+        }
+      ],
       "group": "Group D",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -678,6 +695,33 @@
       "time": "16:00 UTC-4",
       "team1": "Germany",
       "team2": "Ivory Coast",
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Deniz Undav",
+          "minute": 68
+        },
+        {
+          "name": "Deniz Undav",
+          "minute": 90,
+          "offset": 4
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Franck Kessié",
+          "minute": 30
+        }
+      ],
       "group": "Group E",
       "ground": "Toronto"
     },
@@ -687,6 +731,18 @@
       "time": "19:00 UTC-5",
       "team1": "Ecuador",
       "team2": "Curaçao",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [],
       "group": "Group E",
       "ground": "Kansas City"
     },
@@ -801,6 +857,44 @@
       "time": "12:00 UTC-5",
       "team1": "Netherlands",
       "team2": "Sweden",
+      "score": {
+        "ft": [
+          5,
+          1
+        ],
+        "ht": [
+          2,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Brian Brobbey",
+          "minute": 5
+        },
+        {
+          "name": "Brian Brobbey",
+          "minute": 17
+        },
+        {
+          "name": "Cody Gakpo",
+          "minute": 47
+        },
+        {
+          "name": "Cody Gakpo",
+          "minute": 54
+        },
+        {
+          "name": "Crysencio Summerville",
+          "minute": 89
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Anthony Elanga",
+          "minute": 59
+        }
+      ],
       "group": "Group F",
       "ground": "Houston"
     },
@@ -1767,6 +1861,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-20T05:00:31.042Z",
+  "lastUpdated": "2026-06-21T05:00:19.783Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
