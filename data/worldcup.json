@@ -904,6 +904,35 @@
       "time": "22:00 UTC-6",
       "team1": "Tunisia",
       "team2": "Japan",
+      "score": {
+        "ft": [
+          0,
+          4
+        ],
+        "ht": [
+          0,
+          2
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Daichi Kamada",
+          "minute": 4
+        },
+        {
+          "name": "Ayase Ueda",
+          "minute": 31
+        },
+        {
+          "name": "Junya Ito",
+          "minute": 69
+        },
+        {
+          "name": "Ayase Ueda",
+          "minute": 83
+        }
+      ],
       "group": "Group F",
       "ground": "Monterrey (Guadalupe)"
     },
@@ -1002,6 +1031,18 @@
       "time": "12:00 UTC-7",
       "team1": "Belgium",
       "team2": "Iran",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [],
       "group": "Group G",
       "ground": "Los Angeles (Inglewood)"
     },
@@ -1011,6 +1052,36 @@
       "time": "18:00 UTC-7",
       "team1": "New Zealand",
       "team2": "Egypt",
+      "score": {
+        "ft": [
+          1,
+          3
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Finn Surman",
+          "minute": 15
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Mostafa Zico",
+          "minute": 58
+        },
+        {
+          "name": "Mohamed Salah",
+          "minute": 67
+        },
+        {
+          "name": "Trézéguet",
+          "minute": 82
+        }
+      ],
       "group": "Group G",
       "ground": "Vancouver"
     },
@@ -1090,6 +1161,36 @@
       "time": "12:00 UTC-4",
       "team1": "Spain",
       "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          4,
+          0
+        ],
+        "ht": [
+          3,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Lamine Yamal",
+          "minute": 10
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "minute": 21
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "minute": 24
+        },
+        {
+          "name": "Hassan Al-Tambakti",
+          "minute": 49,
+          "owngoal": true
+        }
+      ],
+      "goals2": [],
       "group": "Group H",
       "ground": "Atlanta"
     },
@@ -1099,6 +1200,37 @@
       "time": "18:00 UTC-4",
       "team1": "Uruguay",
       "team2": "Cape Verde",
+      "score": {
+        "ft": [
+          2,
+          2
+        ],
+        "ht": [
+          2,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Maxi Araújo",
+          "minute": 44
+        },
+        {
+          "name": "Agustín Cano",
+          "minute": 45,
+          "offset": 6
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Kevin Pina",
+          "minute": 21
+        },
+        {
+          "name": "Hélio Varela",
+          "minute": 61
+        }
+      ],
       "group": "Group H",
       "ground": "Miami (Miami Gardens)"
     },
@@ -1861,6 +1993,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-21T05:00:19.783Z",
+  "lastUpdated": "2026-06-22T05:00:21.711Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
