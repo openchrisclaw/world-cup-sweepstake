@@ -1547,6 +1547,32 @@
       "time": "20:00 UTC-7",
       "team1": "Jordan",
       "team2": "Algeria",
+      "score": {
+        "ft": [
+          1,
+          2
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Nizar Al-Rashdan",
+          "minute": 36
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Nadhir Benbouali",
+          "minute": 69
+        },
+        {
+          "name": "Amine Gouiri",
+          "minute": 82
+        }
+      ],
       "group": "Group J",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -1646,6 +1672,40 @@
       "time": "12:00 UTC-5",
       "team1": "Portugal",
       "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          5,
+          0
+        ],
+        "ht": [
+          3,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Cristiano Ronaldo",
+          "minute": 6
+        },
+        {
+          "name": "Nuno Mendes",
+          "minute": 17
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "minute": 39
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "minute": 60,
+          "owngoal": true
+        },
+        {
+          "name": "Rafael Leão",
+          "minute": 87
+        }
+      ],
+      "goals2": [],
       "group": "Group K",
       "ground": "Houston"
     },
@@ -1655,6 +1715,23 @@
       "time": "20:00 UTC-6",
       "team1": "Colombia",
       "team2": "DR Congo",
+      "score": {
+        "ft": [
+          1,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Daniel Muñoz",
+          "minute": 76
+        }
+      ],
+      "goals2": [],
       "group": "Group K",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -1758,6 +1835,18 @@
       "time": "16:00 UTC-4",
       "team1": "England",
       "team2": "Ghana",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [],
       "group": "Group L",
       "ground": "Boston (Foxborough)"
     },
@@ -1767,6 +1856,23 @@
       "time": "19:00 UTC-4",
       "team1": "Panama",
       "team2": "Croatia",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Ante Budimir",
+          "minute": 54
+        }
+      ],
       "group": "Group L",
       "ground": "Toronto"
     },
@@ -2075,6 +2181,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-23T05:00:21.875Z",
+  "lastUpdated": "2026-06-24T05:00:20.405Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
