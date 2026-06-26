@@ -140,6 +140,16 @@
       "peopleCount": 14,
       "headline": "Rosaria’s having a belter as Mexico and South Africa keep rolling",
       "text": "Rosaria had a lovely little afternoon: Mexico swatted Czech Republic (Carolina) aside, and South Africa edged South Korea (Christopher), so Rosaria stays right on Max’s heels. Max still had the biggest win of the lot though, with Brazil giving Scotland (Henry) a proper going-over. Henry’s the main loser from the round, with Carolina and Christopher also taking hits. Overall, Max is still best on 17 points, while Sofia is bottom on 4 and looking a touch grim."
+    },
+    {
+      "generatedAt": "2026-06-26T05:00:26.289Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Turkey take the biscuit as Max keeps the lid on the lot",
+      "text": "Turkey (Chris) edged USA (Vicki) 3-2, so Chris takes the cheers and Vicki takes the bruises. Elsewhere it was all rather civilised: Paraguay (Max) v Australia (Nana) finished 0-0, and Japan (Alex) v Sweden (Emily) also shared the points. No big wobbles for the leaders, but Max stays top overall on 18 points, with Rosaria next on 16. At the other end, Sofia is still propping up the table on 4 points, a fair way adrift of the pack."
     }
   ]
 }
