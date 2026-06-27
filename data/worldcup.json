@@ -1553,6 +1553,18 @@
       "time": "19:00 UTC-5",
       "team1": "Cape Verde",
       "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [],
       "group": "Group H",
       "ground": "Houston"
     },
@@ -1562,6 +1574,23 @@
       "time": "18:00 UTC-6",
       "team1": "Uruguay",
       "team2": "Spain",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Álex Baena",
+          "minute": 42
+        }
+      ],
       "group": "Group H",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -1735,6 +1764,41 @@
       "time": "15:00 UTC-4",
       "team1": "Norway",
       "team2": "France",
+      "score": {
+        "ft": [
+          1,
+          4
+        ],
+        "ht": [
+          1,
+          3
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Thelo Aasgaard",
+          "minute": 21
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Ousmane Dembélé",
+          "minute": 7
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "minute": 20
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "minute": 32
+        },
+        {
+          "name": "Désiré Doué",
+          "minute": 90,
+          "offset": 4
+        }
+      ],
       "group": "Group I",
       "ground": "Boston (Foxborough)"
     },
@@ -1744,6 +1808,39 @@
       "time": "15:00 UTC-4",
       "team1": "Senegal",
       "team2": "Iraq",
+      "score": {
+        "ft": [
+          5,
+          0
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Habib Diarra",
+          "minute": 4
+        },
+        {
+          "name": "Ismaïla Sarr",
+          "minute": 56
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": 59
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": 71
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "minute": 82
+        }
+      ],
+      "goals2": [],
       "group": "Group I",
       "ground": "Toronto"
     },
@@ -2494,6 +2591,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-26T05:00:26.281Z",
+  "lastUpdated": "2026-06-27T05:00:23.944Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
