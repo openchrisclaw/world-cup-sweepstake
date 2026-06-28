@@ -1404,6 +1404,28 @@
       "time": "20:00 UTC-7",
       "team1": "Egypt",
       "team2": "Iran",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Mahmoud Saber",
+          "minute": 5
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Ramin Rezaeian",
+          "minute": 14
+        }
+      ],
       "group": "Group G",
       "ground": "Seattle"
     },
@@ -1413,6 +1435,45 @@
       "time": "20:00 UTC-7",
       "team1": "New Zealand",
       "team2": "Belgium",
+      "score": {
+        "ft": [
+          1,
+          5
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Elijah Just",
+          "minute": 84
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Leandro Trossard",
+          "minute": 28
+        },
+        {
+          "name": "Leandro Trossard",
+          "minute": 50
+        },
+        {
+          "name": "Kevin De Bruyne",
+          "minute": 66
+        },
+        {
+          "name": "Romelu Lukaku",
+          "minute": 86
+        },
+        {
+          "name": "Alexis Saelemaekers",
+          "minute": 90,
+          "offset": 4
+        }
+      ],
       "group": "Group G",
       "ground": "Vancouver"
     },
@@ -1992,6 +2053,46 @@
       "time": "21:00 UTC-5",
       "team1": "Algeria",
       "team2": "Austria",
+      "score": {
+        "ft": [
+          3,
+          3
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Rafik Belghali",
+          "minute": 45
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": 60
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": 90,
+          "offset": 3
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Marko Arnautovic",
+          "minute": 28
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "minute": 55
+        },
+        {
+          "name": "Sasa Kalajdzic",
+          "minute": 90,
+          "offset": 6
+        }
+      ],
       "group": "Group J",
       "ground": "Kansas City"
     },
@@ -2001,6 +2102,37 @@
       "time": "21:00 UTC-5",
       "team1": "Jordan",
       "team2": "Argentina",
+      "score": {
+        "ft": [
+          1,
+          3
+        ],
+        "ht": [
+          0,
+          2
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Mousa Al-Tamari",
+          "minute": 55
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Giovani Lo Celso",
+          "minute": 19
+        },
+        {
+          "name": "Lautaro Martínez",
+          "minute": 31,
+          "penalty": true
+        },
+        {
+          "name": "Lionel Messi",
+          "minute": 80
+        }
+      ],
       "group": "Group J",
       "ground": "Dallas (Arlington)"
     },
@@ -2151,6 +2283,18 @@
       "time": "19:30 UTC-4",
       "team1": "Colombia",
       "team2": "Portugal",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [],
       "group": "Group K",
       "ground": "Miami (Miami Gardens)"
     },
@@ -2160,6 +2304,38 @@
       "time": "19:30 UTC-4",
       "team1": "DR Congo",
       "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          3,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Yoane Wissa",
+          "minute": 68,
+          "penalty": true
+        },
+        {
+          "name": "Fiston Mayele",
+          "minute": 78
+        },
+        {
+          "name": "Yoane Wissa",
+          "minute": 90,
+          "offset": 1
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Eldor Shomurodov",
+          "minute": 10
+        }
+      ],
       "group": "Group K",
       "ground": "Atlanta"
     },
@@ -2292,6 +2468,27 @@
       "time": "17:00 UTC-4",
       "team1": "Panama",
       "team2": "England",
+      "score": {
+        "ft": [
+          0,
+          2
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Jude Bellingham",
+          "minute": 62
+        },
+        {
+          "name": "Harry Kane",
+          "minute": 67
+        }
+      ],
       "group": "Group L",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -2301,6 +2498,32 @@
       "time": "17:00 UTC-4",
       "team1": "Croatia",
       "team2": "Ghana",
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Petar Sucic",
+          "minute": 31
+        },
+        {
+          "name": "Nikola Vlasic",
+          "minute": 83
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Derrick Luckassen",
+          "minute": 73
+        }
+      ],
       "group": "Group L",
       "ground": "Philadelphia"
     },
@@ -2591,6 +2814,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-27T05:00:23.944Z",
+  "lastUpdated": "2026-06-28T05:00:22.070Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
