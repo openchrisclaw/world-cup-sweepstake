@@ -2579,6 +2579,33 @@
       "time": "12:00 UTC-5",
       "team1": "Brazil",
       "team2": "Japan",
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Casemiro",
+          "minute": 56
+        },
+        {
+          "name": "Gabriel Martinelli",
+          "minute": 90,
+          "offset": 5
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Kaishu Sano",
+          "minute": 29
+        }
+      ],
       "ground": "Houston"
     },
     {
@@ -2832,6 +2859,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-29T05:00:18.974Z",
+  "lastUpdated": "2026-06-30T05:00:23.369Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
