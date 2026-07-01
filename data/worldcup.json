@@ -2561,6 +2561,36 @@
       "time": "16:30 UTC-4",
       "team1": "Germany",
       "team2": "Paraguay",
+      "score": {
+        "p": [
+          3,
+          4
+        ],
+        "et": [
+          1,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Kai Havertz",
+          "minute": 54
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Julio Enciso",
+          "minute": 42
+        }
+      ],
       "ground": "Boston (Foxborough)"
     },
     {
@@ -2570,6 +2600,37 @@
       "time": "19:00 UTC-6",
       "team1": "Netherlands",
       "team2": "Morocco",
+      "score": {
+        "p": [
+          2,
+          3
+        ],
+        "et": [
+          1,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Cody Gakpo",
+          "minute": 72
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Issa Diop",
+          "minute": 90,
+          "offset": 1
+        }
+      ],
       "ground": "Monterrey (Guadalupe)"
     },
     {
@@ -2615,6 +2676,31 @@
       "time": "17:00 UTC-4",
       "team1": "France",
       "team2": "Sweden",
+      "score": {
+        "ft": [
+          3,
+          0
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Kylian Mbappé",
+          "minute": 45
+        },
+        {
+          "name": "Bradley Barcola",
+          "minute": 53
+        },
+        {
+          "name": "Kylian Mbappé",
+          "minute": 74
+        }
+      ],
+      "goals2": [],
       "ground": "New York/New Jersey (East Rutherford)"
     },
     {
@@ -2624,6 +2710,32 @@
       "time": "12:00 UTC-5",
       "team1": "Ivory Coast",
       "team2": "Norway",
+      "score": {
+        "ft": [
+          1,
+          2
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Amad Diallo",
+          "minute": 74
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Antonio Nusa",
+          "minute": 39
+        },
+        {
+          "name": "Erling Haaland",
+          "minute": 86
+        }
+      ],
       "ground": "Dallas (Arlington)"
     },
     {
@@ -2633,6 +2745,27 @@
       "time": "19:00 UTC-6",
       "team1": "Mexico",
       "team2": "Ecuador",
+      "score": {
+        "ft": [
+          2,
+          0
+        ],
+        "ht": [
+          2,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Julián Quiñones",
+          "minute": 22
+        },
+        {
+          "name": "Raúl Jiménez",
+          "minute": 31
+        }
+      ],
+      "goals2": [],
       "ground": "Mexico City"
     },
     {
@@ -2859,6 +2992,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-06-30T05:00:23.369Z",
+  "lastUpdated": "2026-07-01T05:00:18.157Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
