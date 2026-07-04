@@ -220,6 +220,16 @@
       "peopleCount": 14,
       "headline": "Spain cruise, Portugal squeak by, and Chris gets a proper duffing",
       "text": "Recent results were a mixed bag: Spain (Grandad) were the big winners with a 3-0 stroll, while Portugal (Jack) edged Croatia (Henry) 2-1 and USA (Vicki) beat Bosnia & Herzegovina (Chris) 2-0. That leaves Grandad, Jack and Vicki smiling; Henry and Chris are having a rather grim time of it. Overall, Max stays top of the table on 26 points, with Grandad best of the rest on 20. At the bottom, Sofia is still propping up the sweepstake on 9 points. A tidy little afternoon for some, a right mess for others."
+    },
+    {
+      "generatedAt": "2026-07-04T05:00:18.927Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "Chris bags it, Sara and Sofia slip on the banana skin",
+      "text": "A tidy one for Chris, with Colombia (Chris) nicking a 1-0 win over Ghana (Sara). Meanwhile, Argentina (Nana) and Cape Verde (Vicki) shared the points, as did Australia (Nana) and Egypt (Sofia) — proper draw-lovers, that lot. At the top, Max is still the king of the heap on 26 points. At the other end, Sofia remains bottom on 10, with Christopher just above her on 11. Not a disaster for Nana, but two draws in a row rather takes the shine off."
     }
   ]
 }
