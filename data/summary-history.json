@@ -230,6 +230,16 @@
       "peopleCount": 14,
       "headline": "Chris bags it, Sara and Sofia slip on the banana skin",
       "text": "A tidy one for Chris, with Colombia (Chris) nicking a 1-0 win over Ghana (Sara). Meanwhile, Argentina (Nana) and Cape Verde (Vicki) shared the points, as did Australia (Nana) and Egypt (Sofia) — proper draw-lovers, that lot. At the top, Max is still the king of the heap on 26 points. At the other end, Sofia remains bottom on 10, with Christopher just above her on 11. Not a disaster for Nana, but two draws in a row rather takes the shine off."
+    },
+    {
+      "generatedAt": "2026-07-05T05:00:20.271Z",
+      "summaryVersion": 9,
+      "source": "openai",
+      "model": "gpt-5.4-mini",
+      "playersSignature": "[[\"Alex\",[\"England\",\"Japan\",\"New Zealand\"]],[\"Carolina\",[\"Czech Republic\",\"Ecuador\",\"France\"]],[\"Chris\",[\"Bosnia & Herzegovina\",\"Colombia\",\"Turkey\"]],[\"Christopher\",[\"Curaçao\",\"Germany\",\"South Korea\"]],[\"Emily\",[\"Iran\",\"Netherlands\",\"Panama\",\"Sweden\"]],[\"Grandad\",[\"Austria\",\"Ivory Coast\",\"Spain\"]],[\"Henry\",[\"Canada\",\"Croatia\",\"Qatar\",\"Scotland\"]],[\"Jack\",[\"DR Congo\",\"Haiti\",\"Portugal\",\"Switzerland\"]],[\"Max\",[\"Brazil\",\"Norway\",\"Paraguay\",\"Saudi Arabia\"]],[\"Nana\",[\"Argentina\",\"Australia\",\"Uzbekistan\"]],[\"Rosaria\",[\"Algeria\",\"Mexico\",\"South Africa\"]],[\"Sara\",[\"Ghana\",\"Morocco\",\"Tunisia\",\"Uruguay\"]],[\"Sofia\",[\"Egypt\",\"Iraq\",\"Jordan\",\"Senegal\"]],[\"Vicki\",[\"Belgium\",\"Cape Verde\",\"USA\"]]]",
+      "peopleCount": 14,
+      "headline": "France and Morocco on the up, Henry’s had a proper clobbering",
+      "text": "Carolina’s France nicked it, Sara’s Morocco were all over Canada, and Chris edged Ghana to keep the points ticking. The bad news? Max’s Paraguay got mullered, so that was a flat one for him, and Henry’s Canada had a right going-over. Overall, Max is still best with 26 points, though Jack and Grandad are breathing down the necks. At the other end, Sofia is still bottom of the pile on 10, with Christopher not much happier on 11. A tidy little shake-up, but the table’s still got a familiar look about it."
     }
   ]
 }
