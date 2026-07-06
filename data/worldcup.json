@@ -3166,6 +3166,34 @@
       "time": "16:00 UTC-4",
       "team1": "Brazil",
       "team2": "Norway",
+      "score": {
+        "ft": [
+          1,
+          2
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Neymar",
+          "minute": 90,
+          "offset": 10,
+          "penalty": true
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Erling Haaland",
+          "minute": 79
+        },
+        {
+          "name": "Erling Haaland",
+          "minute": 90
+        }
+      ],
       "ground": "New York/New Jersey (East Rutherford)"
     },
     {
@@ -3175,6 +3203,42 @@
       "time": "18:00 UTC-6",
       "team1": "Mexico",
       "team2": "England",
+      "score": {
+        "ft": [
+          2,
+          3
+        ],
+        "ht": [
+          1,
+          2
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Julián Quiñones",
+          "minute": 42
+        },
+        {
+          "name": "Raúl Jiménez",
+          "minute": 69,
+          "penalty": true
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Jude Bellingham",
+          "minute": 36
+        },
+        {
+          "name": "Jude Bellingham",
+          "minute": 38
+        },
+        {
+          "name": "Harry Kane",
+          "minute": 60,
+          "penalty": true
+        }
+      ],
       "ground": "Mexico City"
     },
     {
@@ -3236,8 +3300,8 @@
       "round": "Quarter-final",
       "date": "2026-07-11",
       "time": "17:00 UTC-4",
-      "team1": "W91",
-      "team2": "W92",
+      "team1": "Norway",
+      "team2": "England",
       "ground": "Miami (Miami Gardens)"
     },
     {
@@ -3284,6 +3348,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-07-05T05:00:20.263Z",
+  "lastUpdated": "2026-07-06T05:00:20.027Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
