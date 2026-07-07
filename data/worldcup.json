@@ -3248,6 +3248,24 @@
       "time": "14:00 UTC-5",
       "team1": "Portugal",
       "team2": "Spain",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Mikel Merino",
+          "minute": 90,
+          "offset": 1
+        }
+      ],
       "ground": "Dallas (Arlington)"
     },
     {
@@ -3257,6 +3275,41 @@
       "time": "17:00 UTC-7",
       "team1": "USA",
       "team2": "Belgium",
+      "score": {
+        "ft": [
+          1,
+          4
+        ],
+        "ht": [
+          1,
+          2
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Malik Tillman",
+          "minute": 31
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Charles De Ketelaere",
+          "minute": 9
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "minute": 33
+        },
+        {
+          "name": "Hans Vanaken",
+          "minute": 57
+        },
+        {
+          "name": "Romelu Lukaku",
+          "minute": 90,
+          "offset": 3
+        }
+      ],
       "ground": "Seattle"
     },
     {
@@ -3291,8 +3344,8 @@
       "round": "Quarter-final",
       "date": "2026-07-10",
       "time": "12:00 UTC-7",
-      "team1": "W93",
-      "team2": "W94",
+      "team1": "Spain",
+      "team2": "Belgium",
       "ground": "Los Angeles (Inglewood)"
     },
     {
@@ -3348,6 +3401,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-07-06T05:00:20.027Z",
+  "lastUpdated": "2026-07-07T05:00:17.853Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
