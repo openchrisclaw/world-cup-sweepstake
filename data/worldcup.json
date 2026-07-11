@@ -3392,6 +3392,27 @@
       "time": "16:00 UTC-4",
       "team1": "France",
       "team2": "Morocco",
+      "score": {
+        "ft": [
+          2,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Kylian Mbappé",
+          "minute": 60
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "minute": 66
+        }
+      ],
+      "goals2": [],
       "ground": "Boston (Foxborough)"
     },
     {
@@ -3401,6 +3422,32 @@
       "time": "12:00 UTC-7",
       "team1": "Spain",
       "team2": "Belgium",
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Fabián Ruiz",
+          "minute": 30
+        },
+        {
+          "name": "Mikel Merino",
+          "minute": 88
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Charles De Ketelaere",
+          "minute": 41
+        }
+      ],
       "ground": "Los Angeles (Inglewood)"
     },
     {
@@ -3426,8 +3473,8 @@
       "round": "Semi-final",
       "date": "2026-07-14",
       "time": "14:00 UTC-5",
-      "team1": "W97",
-      "team2": "W98",
+      "team1": "France",
+      "team2": "Spain",
       "ground": "Dallas (Arlington)"
     },
     {
@@ -3456,6 +3503,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-07-08T05:00:40.258Z",
+  "lastUpdated": "2026-07-11T05:00:21.673Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
