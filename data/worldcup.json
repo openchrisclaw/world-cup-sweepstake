@@ -3457,6 +3457,37 @@
       "time": "17:00 UTC-4",
       "team1": "Norway",
       "team2": "England",
+      "score": {
+        "et": [
+          1,
+          2
+        ],
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Andreas Schjelderup",
+          "minute": 36
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Jude Bellingham",
+          "minute": 45,
+          "offset": 2
+        },
+        {
+          "name": "Jude Bellingham",
+          "minute": 93
+        }
+      ],
       "ground": "Miami (Miami Gardens)"
     },
     {
@@ -3466,6 +3497,41 @@
       "time": "20:00 UTC-5",
       "team1": "Argentina",
       "team2": "Switzerland",
+      "score": {
+        "et": [
+          3,
+          1
+        ],
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Alexis Mac Allister",
+          "minute": 10
+        },
+        {
+          "name": "Julián Álvarez",
+          "minute": 112
+        },
+        {
+          "name": "Lautaro Martínez",
+          "minute": 120,
+          "offset": 1
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Dan Ndoye",
+          "minute": 67
+        }
+      ],
       "ground": "Kansas City"
     },
     {
@@ -3482,8 +3548,8 @@
       "round": "Semi-final",
       "date": "2026-07-15",
       "time": "15:00 UTC-4",
-      "team1": "W99",
-      "team2": "W100",
+      "team1": "England",
+      "team2": "Argentina",
       "ground": "Atlanta"
     },
     {
@@ -3503,6 +3569,6 @@
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-07-11T05:00:21.673Z",
+  "lastUpdated": "2026-07-12T05:00:21.950Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
