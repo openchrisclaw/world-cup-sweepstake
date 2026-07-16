@@ -3572,6 +3572,33 @@
       "time": "15:00 UTC-4",
       "team1": "England",
       "team2": "Argentina",
+      "score": {
+        "ft": [
+          1,
+          2
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Anthony Gordon",
+          "minute": 55
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Enzo Fernández",
+          "minute": 85
+        },
+        {
+          "name": "Lautaro Martínez",
+          "minute": 90,
+          "offset": 2
+        }
+      ],
       "ground": "Atlanta"
     },
     {
@@ -3579,7 +3606,7 @@
       "date": "2026-07-18",
       "time": "17:00 UTC-4",
       "team1": "France",
-      "team2": "L102",
+      "team2": "England",
       "ground": "Miami (Miami Gardens)"
     },
     {
@@ -3587,10 +3614,10 @@
       "date": "2026-07-19",
       "time": "15:00 UTC-4",
       "team1": "Spain",
-      "team2": "W102",
+      "team2": "Argentina",
       "ground": "New York/New Jersey (East Rutherford)"
     }
   ],
-  "lastUpdated": "2026-07-15T05:00:18.291Z",
+  "lastUpdated": "2026-07-16T05:00:23.619Z",
   "source": "https://raw.githubusercontent.com/upbound-web/worldcup-live.json/master/2026/worldcup.json"
 }
